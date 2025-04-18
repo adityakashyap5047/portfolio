@@ -1,21 +1,7 @@
 @import "tailwindcss/preflight";
+@import "tailwindcss";
 @tailwind utilities;
 
 body {
-  background: linear-gradient(135deg, #4141ff, #2bfff8);
-  background-attachment: fixed;
-  overflow: hidden;
-}
-
-@keyframes float {
-  0%, 100% {
-    transform: translateY(0) rotate(0deg);
-  }
-  50% {
-    transform: translateY(-20px) rotate(10deg);
-  }
-}
-
-.animate-float {
-  animation: float 1s ease-in-out infinite;
+  background: linear-gradient(135deg, #0791b4, #1b1c84);
 }
