@@ -66,9 +66,9 @@ export default function TypewriterOverrideEffect() {
   }, [asciiIndex, charIndex, isDeleting, currentText, wordIndex]);
 
   return (
-    <h2 className="text-2xl sm:text-4xl font-semibold text-white mt-2">
+    <p className="text-4xl sm:text-4xl font-semibold text-white mt-24">
       I am a <span className="text-pink-300">{currentText}{tempChar}</span>
-      <span className="blinking-cursor">|</span>
-    </h2>
+      <span className="blinking-cursor text-6xl text-green-900">|</span>
+    </p>
   );
 }
