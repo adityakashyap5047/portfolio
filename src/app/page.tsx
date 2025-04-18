@@ -1,5 +1,9 @@
+import TypewriterOverrideEffect from "@/components/TypewriterOverrideEffect";
+
 export default function Home() {
   return(
-    <div>Helo</div>
+    <div>
+      <TypewriterOverrideEffect/>
+    </div>
   )
 }
