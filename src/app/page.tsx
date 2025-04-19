@@ -1,4 +1,5 @@
 import Experience from "@/components/Experience";
+import SkillsSection from "@/components/SkillSection";
 import TypewriterOverrideEffect from "@/components/TypewriterOverrideEffect";
 
 export default function Home() {
@@ -6,6 +7,7 @@ export default function Home() {
     <div>
       <TypewriterOverrideEffect/>
       <Experience/>
+      <SkillsSection/>
     </div>
   )
 }
