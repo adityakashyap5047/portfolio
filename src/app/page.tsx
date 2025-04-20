@@ -1,12 +1,12 @@
 import Experience from "@/components/Experience";
+import { Main } from "@/components/Main";
 import ProjectsSection from "@/components/ProjectSection";
 import SkillsSection from "@/components/SkillSection";
-import TypewriterOverrideEffect from "@/components/TypewriterOverrideEffect";
 
 export default function Home() {
   return(
     <div>
-      <TypewriterOverrideEffect/>
+      <Main/>
       <SkillsSection/>
       <Experience/>
       <ProjectsSection/>
