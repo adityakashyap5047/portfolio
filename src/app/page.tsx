@@ -1,11 +1,13 @@
 import Experience from "@/components/Experience";
 import { Main } from "@/components/Main";
+import Parallax from "@/components/parallax/Parallax";
 import ProjectsSection from "@/components/ProjectSection";
 import SkillsSection from "@/components/SkillSection";
 
 export default function Home() {
   return(
     <div>
+      <Parallax/>
       <Main/>
       <SkillsSection/>
       <Experience/>
