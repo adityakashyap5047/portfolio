@@ -1,47 +1,51 @@
 "use client";
 
-import Image from "next/image";
 import { useState } from "react";
 import projImg1 from "@/assets/img/project-img1.png";
 import projImg2 from "@/assets/img/project-img2.png";
 import projImg3 from "@/assets/img/project-img3.png";
-import colorSharp2 from "@/assets/img/color-sharp2.png";
 import ProjectCard from "./ProjectCard";
 
 const tabs = [
-  { key: "first", label: "Tab 1" },
-  { key: "second", label: "Tab 2" },
-  { key: "third", label: "Tab 3" },
+  { key: "first", label: "Web Dev" },
+  { key: "second", label: "AI/ML" },
+  { key: "third", label: "DevOps" },
 ];
 
 const projects = [
   {
     title: "Business Startup",
+    type: "Web Development",
     description: "Design & Development",
     imgUrl: projImg1,
   },
   {
     title: "Business Startup",
+    type: "Web Development",
     description: "Design & Development",
     imgUrl: projImg2,
   },
   {
     title: "Business Startup",
+    type: "Web Development",
     description: "Design & Development",
     imgUrl: projImg3,
   },
   {
     title: "Business Startup",
+    type: "AI/ML",
     description: "Design & Development",
     imgUrl: projImg1,
   },
   {
     title: "Business Startup",
+    type: "AI/ML",
     description: "Design & Development",
     imgUrl: projImg2,
   },
   {
     title: "Business Startup",
+    type: "DevOps",
     description: "Design & Development",
     imgUrl: projImg3,
   },
@@ -53,8 +57,7 @@ const Projects = () => {
   return (
     <section
       id="projects"
-      className="relative py-20 text-white overflow-hidden"
-      style={{backgroundImage: 'linear-gradient(90deg, #87CEFA 0%, #D8BFD8 35%, #720e9e 100%)'}}
+      className="relative py-20 bg-black text-white overflow-hidden"
     >
       <div className="max-w-[1200px] px-4 mx-auto text-center">
         <h2 className="text-[45px] font-bold">Projects</h2>
@@ -95,33 +98,28 @@ const Projects = () => {
         {/* Tab Content */}
         {activeTab === "first" && (
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
-            {projects.map((project, index) => (
+            {projects.filter((project) => project.type === "Web Development").map((project, index) => (
               <ProjectCard key={index} {...project} />
             ))}
           </div>
         )}
 
         {activeTab === "second" && (
-          <p className="text-gray-400 max-w-xl mx-auto">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque
-            quam, quod neque provident velit, rem explicabo excepturi.
-          </p>
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+            {projects.filter((project) => project.type === "AI/ML").map((project, index) => (
+              <ProjectCard key={index} {...project} />
+            ))}
+          </div>
         )}
 
         {activeTab === "third" && (
-          <p className="text-gray-400 max-w-xl mx-auto">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque
-            quam, quod neque provident velit, rem explicabo excepturi.
-          </p>
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+            {projects.filter((project) => project.type === "DevOps").map((project, index) => (
+              <ProjectCard key={index} {...project} />
+            ))}
+          </div>
         )}
       </div>
-
-      {/* Background Shape */}
-      <Image
-        src={colorSharp2}
-        alt="background shape"
-        className="absolute right-0 top-[20%] w-[35%] -z-10 pointer-events-none select-none"
-      />
     </section>
   );
 };
