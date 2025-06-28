@@ -2,9 +2,9 @@
 
 import { useState, useEffect } from "react";
 import Image from "next/image";
+import { motion } from "framer-motion";
 import headerImg from "@/assets/img/header-img.svg";
 import bgImage from "@/assets/img/banner-bg.png";
-import { motion } from "framer-motion";
 
 const toRotate = ["Web Developer", "Web Designer", "UI/UX Designer"];
 const period = 1000;
@@ -28,8 +28,7 @@ const Banner = () => {
       : fullText.substring(0, text.length + 1);
 
     setText(updatedText);
-
-    if (isDeleting) setDelta((prev) => prev / 2);
+    setDelta(isDeleting ? delta / 2 : delta);
 
     if (!isDeleting && updatedText === fullText) {
       setIsDeleting(true);
@@ -44,43 +43,50 @@ const Banner = () => {
   return (
     <section
       id="home"
-      className="relative pt-260 pb-100 bg-cover bg-top bg-no-repeat"
+      className="relative min-h-screen bg-cover bg-top bg-no-repeat lg:!px-16 !py-16 md:!py-28"
       style={{
         backgroundImage: `url(${bgImage.src})`,
       }}
     >
-      <div className="container mx-auto px-4">
-        <div className="flex flex-col-reverse md:flex-row items-center">
-          {/* Text */}
-          <div className="w-full md:w-1/2 xl:w-7/12">
+      <div className="max-w-7xl mx-auto !mt-4 md:!mt-24 !px-4 sm:!px-6 lg:!px-8">
+        <div className="flex flex-col-reverse md:flex-row items-center gap-10">
+          {/* Text Section */}
+          <div className="w-full md:w-1/2">
             <motion.div
               initial={{ opacity: 0, y: 40 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6 }}
             >
-              <span className="inline-block mb-4 font-bold text-[20px] tracking-wide border border-white border-opacity-50 px-4 py-2 bg-gradient-to-r from-[#AA367C]/50 to-[#4A2FBD]/50">
+              <span className="inline-block !mb-12 font-semibold text-sm md:text-base tracking-wide border border-white/40 !px-4 !py-2 bg-gradient-to-r from-[#AA367C]/40 to-[#4A2FBD]/40 rounded-md">
                 Welcome to my Portfolio
               </span>
-              <h1 className="text-[40px] md:text-[55px] lg:text-[65px] font-bold text-white leading-none mb-6">
+
+              <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white leading-tight my-6">
                 Hi! I am Judy{" "}
-                <span className="border-r-2 border-gray-400 pr-1">{text}</span>
+                <span className="border-r-2 border-gray-400 pr-1">
+                  {text}
+                </span>
               </h1>
-              <p className="text-[#B8B8B8] text-[18px] leading-relaxed mb-8 w-[96%]">
-                Lorem Ipsum is simply dummy text of the printing and typesetting
-                industry. Lorem Ipsum has been the standard dummy text ever
-                since the 1500s.
+
+              <p className="text-gray-300 text-base sm:text-lg md:text-lg leading-relaxed !my-8 max-w-xl">
+                I am passionate about building excellent software that improves
+                the lives of those around me. Let’s build something together!
               </p>
-              <button
-                onClick={() => console.log("connect")}
-                className="text-white font-bold text-[20px] flex items-center space-x-2 group transition-all duration-300 mt-[60px]"
-              >
-                <span>Let{`'`}s Connect</span>
-              </button>
+
+              <a href="#connect">
+                <button className="relative cursor-pointer !border border-white text-white font-bold text-base sm:text-lg !px-6 !py-3 rounded-lg overflow-hidden group transition-all duration-300">
+                  <span className="relative z-10">Let&apos;s Connect</span>
+                  <span className="absolute inset-0 bg-white scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left z-0"></span>
+                  <span className="absolute inset-0 text-black group-hover:text-black z-10 text-center w-full h-full flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                    Let&apos;s Connect
+                  </span>
+                </button>
+              </a>
             </motion.div>
           </div>
 
-          {/* Image */}
-          <div className="w-full md:w-1/2 xl:w-5/12 mb-12 md:mb-0 flex justify-center">
+          {/* Image Section */}
+          <div className="w-3/4 sm:w-1/2 !pl-12 flex justify-center">
             <motion.div
               initial={{ scale: 0.8, opacity: 0 }}
               whileInView={{ scale: 1, opacity: 1 }}
@@ -88,8 +94,9 @@ const Banner = () => {
             >
               <Image
                 src={headerImg}
-                alt="Header Img"
-                className="w-[80%] md:w-auto animate-updown"
+                alt="Header"
+                className="w-[85%] md:w-auto animate-updown"
+                priority
               />
             </motion.div>
           </div>

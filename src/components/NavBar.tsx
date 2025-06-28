@@ -26,11 +26,11 @@ const NavBar = () => {
 
   return (
     <nav
-      className={`fixed top-0 w-full z-[9999] transition-all duration-300 ${
-        scrolled ? "bg-[#121212] !py-2 shadow-md" : "bg-transparent !py-4"
+      className={`fixed top-0 w-full z-[9999] transition-all duration-300 !py-5 ${
+        scrolled ? "bg-gradient-to-r from-[#AA367C] to-[#4A2FBD] shadow-md" : "bg-transparent"
       }`}
     >
-      <div className="container mx-auto !px-4 flex justify-between items-center">
+      <div className="container !px-4 flex justify-between items-center">
         {/* Logo */}
         <Link href="/">
           <Image src={logo} alt="Logo" className="w-12 cursor-pointer" />
