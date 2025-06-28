@@ -67,12 +67,12 @@ const NavBar = () => {
             menuOpen ? "flex" : "hidden md:flex"
           }`}
         >
-          {["home", "skills", "projects"].map((link) => (
+          {["home", "skills", "experience", "projects", "contact"].map((link) => (
             <a
               key={link}
               href={`#${link}`}
               onClick={() => handleClick(link)}
-              className={`block !px-6 !py-2 md:!py-0 font-medium text-white text-[18px] tracking-wide transition-opacity duration-200 ${
+              className={`block py-2 md:py-0 font-medium text-white text-[18px] tracking-wide transition-opacity duration-200 ${
                 activeLink === link ? "opacity-100" : "opacity-75"
               } hover:opacity-100`}
             >

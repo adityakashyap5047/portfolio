@@ -71,7 +71,7 @@ export default function Skills() {
     >
       <div className="max-w-[1200px] bg-blue-900/90 rounded-sm shadow-sm px-4 mx-auto text-center">
         <h2 className="text-[45px] text-white font-bold">My Skills</h2>
-        <p className="text-[#bfdd13] text-[18px] leading-relaxed tracking-wide !my-12 !ml-auto !mr-auto max-w-[56%] mx-auto">
+        <p className="text-[#bfdd13] text-[18px] leading-relaxed tracking-wide !my-12 !ml-auto !mr-auto sm:max-w-[56%] mx-auto">
           Lorem Ipsum is simply dummy text of the printing and typesetting
           industry. Lorem Ipsum has been the industry standard dummy text ever
           since the 1500s, when an unknown printer took a galley of type and
