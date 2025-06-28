@@ -22,7 +22,7 @@ export const Footer = () => {
             <a href="#"><Image src={navIcon2} alt="Icon2" /></a>
             <a href="#"><Image src={navIcon3} alt="Icon3" /></a>
           </div>
-          <p className="text-sm text-gray-400 !mt-4">Copyright 2022. All Rights Reserved</p>
+          <p className="text-sm text-gray-400 !mt-4">Copyright 2025 &copy; All Rights Reserved</p>
         </div>
       </div>
     </footer>

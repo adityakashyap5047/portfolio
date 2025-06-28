@@ -6,7 +6,7 @@ import { motion } from "framer-motion";
 import headerImg from "@/assets/img/header-img.svg";
 import bgImage from "@/assets/img/banner-bg.png";
 
-const toRotate = ["Full-Stack Developer", "AI/ML Engineer", "UI/UX Designer"];
+const toRotate = ["Full-Stack Developer", "AI/ML Engineer"];
 const period = 1000;
 
 const Banner = () => {
