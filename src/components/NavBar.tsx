@@ -4,9 +4,7 @@ import { useState, useEffect } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import logo from "@/assets/img/logo.svg";
-import navIcon1 from "@/assets/img/nav-icon1.svg";
-import navIcon2 from "@/assets/img/nav-icon2.svg";
-import navIcon3 from "@/assets/img/nav-icon3.svg";
+import { ArrowRight } from 'lucide-react';
 
 const NavBar = () => {
   const [activeLink, setActiveLink] = useState("home");
@@ -29,10 +27,10 @@ const NavBar = () => {
   return (
     <nav
       className={`fixed top-0 w-full z-[9999] transition-all duration-300 ${
-        scrolled ? "bg-[#121212] py-2 shadow-md" : "bg-transparent py-4"
+        scrolled ? "bg-[#121212] !py-2 shadow-md" : "bg-transparent !py-4"
       }`}
     >
-      <div className="container mx-auto px-4 flex justify-between items-center">
+      <div className="container mx-auto !px-4 flex justify-between items-center">
         {/* Logo */}
         <Link href="/">
           <Image src={logo} alt="Logo" className="w-12 cursor-pointer" />
@@ -74,7 +72,7 @@ const NavBar = () => {
               key={link}
               href={`#${link}`}
               onClick={() => handleClick(link)}
-              className={`block px-6 py-2 md:py-0 font-medium text-white text-[18px] tracking-wide transition-opacity duration-200 ${
+              className={`block !px-6 !py-2 md:!py-0 font-medium text-white text-[18px] tracking-wide transition-opacity duration-200 ${
                 activeLink === link ? "opacity-100" : "opacity-75"
               } hover:opacity-100`}
             >
@@ -82,28 +80,15 @@ const NavBar = () => {
             </a>
           ))}
 
-          {/* Social Icons */}
-          <div className="flex items-center space-x-3 mt-4 md:mt-0 md:ml-6">
-            {[navIcon1, navIcon2, navIcon3].map((icon, idx) => (
-              <a
-                key={idx}
-                href="#"
-                className="w-[42px] h-[42px] flex items-center justify-center bg-white bg-opacity-10 border border-white border-opacity-50 rounded-full relative overflow-hidden group transition-all duration-300"
-              >
-                <span className="absolute w-full h-full bg-white rounded-full scale-0 group-hover:scale-100 transition-transform duration-300 z-0"></span>
-                <Image
-                  src={icon}
-                  alt={`Social ${idx}`}
-                  className="w-5 z-10 transition-all duration-300 group-hover:filter group-hover:invert"
-                />
-              </a>
-            ))}
-          </div>
-
           {/* Button */}
-          <a href="#connect" className="mt-4 md:mt-0 md:ml-6">
-            <button className="relative border border-white text-white font-bold text-[18px] px-8 py-3 transition-all duration-300 overflow-hidden group">
-              <span className="z-10 relative">Let’s Connect</span>
+          <a href="#connect" className="!mt-4 md:!mt-0 md:!ml-6">
+            <button className="cursor-pointer relative hover:text-black !border border-white text-white font-bold text-[18px] !px-8 !py-3 transition-all duration-300 overflow-hidden group">
+              <div className="flex items-center gap-6">
+                <span className="z-10 relative">Let{`'`}s Connect </span>
+                <span>
+                  <ArrowRight size={20} strokeWidth={4} className="hover:text-black"/>
+                </span>
+              </div>
               <span className="absolute inset-0 bg-white scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left z-0"></span>
             </button>
           </a>
