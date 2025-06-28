@@ -4,11 +4,10 @@ import { useState, useEffect } from "react";
 import Image from "next/image";
 import headerImg from "@/assets/img/header-img.svg";
 import bgImage from "@/assets/img/banner-bg.png";
-// import { ArrowRightCircle } from "react-bootstrap-icons";
 import { motion } from "framer-motion";
 
 const toRotate = ["Web Developer", "Web Designer", "UI/UX Designer"];
-const period = 2000;
+const period = 1000;
 
 const Banner = () => {
   const [loopNum, setLoopNum] = useState(0);
@@ -45,7 +44,7 @@ const Banner = () => {
   return (
     <section
       id="home"
-      className="relative pt-[260px] pb-[100px] bg-cover bg-top bg-no-repeat"
+      className="relative pt-260 pb-100 bg-cover bg-top bg-no-repeat"
       style={{
         backgroundImage: `url(${bgImage.src})`,
       }}
@@ -60,29 +59,23 @@ const Banner = () => {
               transition={{ duration: 0.6 }}
               viewport={{ once: true }}
             >
-              <span className="inline-block mb-4 text-white font-bold text-[20px] tracking-wide border border-white border-opacity-50 px-4 py-2 bg-gradient-to-r from-[#AA367C]/50 to-[#4A2FBD]/50">
+              <span className="inline-block mb-4 font-bold text-[20px] tracking-wide border border-white border-opacity-50 px-4 py-2 bg-gradient-to-r from-[#AA367C]/50 to-[#4A2FBD]/50">
                 Welcome to my Portfolio
               </span>
               <h1 className="text-[40px] md:text-[55px] lg:text-[65px] font-bold text-white leading-none mb-6">
                 Hi! I am Judy{" "}
-                <span className="border-r-2 border-gray-400 pr-1">
-                  {text}
-                </span>
+                <span className="border-r-2 border-gray-400 pr-1">{text}</span>
               </h1>
               <p className="text-[#B8B8B8] text-[18px] leading-relaxed mb-8 w-[96%]">
                 Lorem Ipsum is simply dummy text of the printing and typesetting
-                industry. Lorem Ipsum has been the standard dummy
-                text ever since the 1500s.
+                industry. Lorem Ipsum has been the standard dummy text ever
+                since the 1500s.
               </p>
               <button
                 onClick={() => console.log("connect")}
                 className="text-white font-bold text-[20px] flex items-center space-x-2 group transition-all duration-300 mt-[60px]"
               >
-                <span>Let’s Connect</span>
-                {/* <ArrowRightCircle
-                  size={25}
-                  className="group-hover:ml-4 ml-2 transition-all duration-300"
-                /> */}
+                <span>Let{`'`}s Connect</span>
               </button>
             </motion.div>
           </div>
@@ -98,7 +91,7 @@ const Banner = () => {
               <Image
                 src={headerImg}
                 alt="Header Img"
-                className="animate-updown w-[80%] md:w-auto"
+                className="w-[80%] md:w-auto animate-updown"
               />
             </motion.div>
           </div>

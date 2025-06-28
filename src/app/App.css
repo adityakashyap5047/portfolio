@@ -1,7 +1,7 @@
 /************ Custom Font ************/
 @font-face {
 	font-family: Centra;
-    src: url('@/assets/font/CentraNo2-Bold.ttf');
+  src: url('@/assets/font/CentraNo2-Bold.ttf');
 	font-weight: 700;
 }
 @font-face {
@@ -82,7 +82,7 @@ p.danger {
 	color: red;
 }
 /************ Navbar Css ************/
-nav.navbar {
+/* nav.navbar {
   padding: 18px 0;
   position: fixed;
   width: 100%;
@@ -228,7 +228,7 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon:before {
 }
 nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 	border-color: transparent;
-}
+} */
 
 /************ Banner Css ************/
 /* .banner {
@@ -301,7 +301,7 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 } */
 
 /************ Skills Css ************/
-.skill {
+/* .skill {
   padding: 0 0 50px 0;
   position: relative;
 }
@@ -338,7 +338,7 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   bottom: 0;
   width: 40%;
   z-index: -4;
-}
+} */
 
 /************ Projects Css ************/
 /* .project {

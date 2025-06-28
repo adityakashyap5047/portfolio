@@ -8,7 +8,7 @@ import logo from "@/assets/img/logo.svg";
 
 export const Footer = () => {
   return (
-    <footer className="bg-cover bg-center bg-no-repeat pb-12 pt-0" style={{ backgroundImage: "url('/assets/img/footer-bg.png')" }}>
+    <footer className="bg-cover bg-center bg-no-repeat pb-12 pt-0" style={{ backgroundImage: "url('@/assets/img/footer-bg.png')" }}>
       <MailchimpForm />
       <div className="container mx-auto px-4 flex flex-col sm:flex-row items-center justify-between">
         <div className="sm:w-1/2 w-full mb-4 sm:mb-0">

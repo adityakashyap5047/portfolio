@@ -1,4 +1,3 @@
-// components/Projects.tsx
 "use client";
 
 import Image from "next/image";
@@ -9,68 +8,87 @@ import projImg3 from "@/assets/img/project-img3.png";
 import colorSharp2 from "@/assets/img/color-sharp2.png";
 import ProjectCard from "./ProjectCard";
 
+const tabs = [
+  { key: "first", label: "Tab 1" },
+  { key: "second", label: "Tab 2" },
+  { key: "third", label: "Tab 3" },
+];
+
+const projects = [
+  { title: "Business Startup", description: "Design & Development", imgUrl: projImg1 },
+  { title: "Business Startup", description: "Design & Development", imgUrl: projImg2 },
+  { title: "Business Startup", description: "Design & Development", imgUrl: projImg3 },
+  { title: "Business Startup", description: "Design & Development", imgUrl: projImg1 },
+  { title: "Business Startup", description: "Design & Development", imgUrl: projImg2 },
+  { title: "Business Startup", description: "Design & Development", imgUrl: projImg3 },
+];
+
 const Projects = () => {
   const [activeTab, setActiveTab] = useState("first");
 
-  const projects = [
-    { title: "Business Startup", description: "Design & Development", imgUrl: projImg1 },
-    { title: "Business Startup", description: "Design & Development", imgUrl: projImg2 },
-    { title: "Business Startup", description: "Design & Development", imgUrl: projImg3 },
-    { title: "Business Startup", description: "Design & Development", imgUrl: projImg1 },
-    { title: "Business Startup", description: "Design & Development", imgUrl: projImg2 },
-    { title: "Business Startup", description: "Design & Development", imgUrl: projImg3 },
-  ];
-
   return (
-    <section id="projects" className="relative py-20 bg-black text-white">
-      <div className="container mx-auto px-4 text-center">
-        <h2 className="text-4xl font-bold mb-4">Projects</h2>
-        <p className="text-gray-400 max-w-2xl mx-auto mb-8">
-          Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+    <section id="projects" className="relative !py-20  bg-black text-white overflow-hidden">
+      <div className="max-w-[1200px] !px-4 !mx-auto !text-center">
+        <h2 className="text-[45px] font-bold">Projects</h2>
+        <p className="text-[#B8B8B8] text-[18px] leading-relaxed tracking-wide !my-12 !ml-auto !mr-auto max-w-[56%] mx-auto">
+          Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
         </p>
 
-        <div className="flex justify-center space-x-4 mb-10 bg-white/10 rounded-full overflow-hidden w-[72%] mx-auto">
-          {[
-            { key: "first", label: "Tab 1" },
-            { key: "second", label: "Tab 2" },
-            { key: "third", label: "Tab 3" },
-          ].map(({ key, label }) => (
-            <button
-              key={key}
-              onClick={() => setActiveTab(key)}
-              className={`w-1/3 py-4 font-medium text-sm relative z-10 transition-all duration-300 ${
-                activeTab === key ? "bg-gradient-to-r from-pink-600 to-indigo-700 border border-white" : "text-white"
-              }`}
-            >
-              {label}
-            </button>
-          ))}
+        {/* Tab Buttons */}
+        <div className="flex justify-center items-center w-[72%] !mx-auto rounded-full overflow-hidden bg-white/10 !mb-12">
+          {tabs.map(({ key, label }, idx) => {
+            const isActive = activeTab === key;
+            const radiusClass =
+              idx === 0
+                ? "rounded-l-full"
+                : idx === tabs.length - 1
+                ? "rounded-r-full"
+                : "";
+
+            return (
+              <button
+                key={key}
+                onClick={() => setActiveTab(key)}
+                className={`w-1/3 py-4 text-sm font-medium transition-all z-10 ${radiusClass} ${
+                  isActive
+                    ? "bg-gradient-to-r from-[#AA367C] to-[#4A2FBD] border border-white text-white"
+                    : "text-white"
+                }`}
+              >
+                {label}
+              </button>
+            );
+          })}
         </div>
 
+        {/* Tab Content */}
         {activeTab === "first" && (
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
-            {projects.map((project, idx) => (
-              <ProjectCard key={idx} {...project} />
+            {projects.map((project, index) => (
+              <ProjectCard key={index} {...project} />
             ))}
           </div>
         )}
 
         {activeTab === "second" && (
           <p className="text-gray-400 max-w-xl mx-auto">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque quam,
+            quod neque provident velit, rem explicabo excepturi.
           </p>
         )}
+
         {activeTab === "third" && (
           <p className="text-gray-400 max-w-xl mx-auto">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            Hello
           </p>
         )}
       </div>
 
+      {/* Background Shape */}
       <Image
         src={colorSharp2}
-        alt="background"
-        className="absolute right-0 top-[20%] w-[35%] -z-10"
+        alt="background shape"
+        className="absolute right-0 top-[20%] w-[35%] -z-10 pointer-events-none select-none"
       />
     </section>
   );
