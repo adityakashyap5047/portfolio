@@ -3,7 +3,7 @@
 import { useState, useEffect } from "react";
 import Image from "next/image";
 import { motion } from "framer-motion";
-import headerImg from "@/assets/img/headerImage.jpg";
+import headerImg from "@/assets/img/header-img.svg";
 import bgImage from "@/assets/img/banner-bg.png";
 
 const toRotate = ["Full-Stack Developer", "AI/ML Engineer", "UI/UX Designer"];
@@ -43,13 +43,13 @@ const Banner = () => {
   return (
     <section
       id="home"
-      className="relative min-h-screen bg-cover bg-top bg-no-repeat !px-6 sm:!px-16 !py-8"
+      className="relative min-h-screen bg-cover bg-top bg-no-repeat px-6 sm:px-16 !py-8"
       style={{
         backgroundImage: `url(${bgImage.src})`,
       }}
     >
       <div className="max-w-7xl mx-auto !mt-4 md:!mt-24">
-        {/* <div className="flex flex-col-reverse md:flex-row items-center justify-between"> */}
+        <div className="flex items-center justify-between">
           {/* Text Section */}
           <div className="w-full md:w-2/3">
             <motion.div
@@ -86,10 +86,10 @@ const Banner = () => {
                 </button>
               </a>
             </motion.div>
-          {/* </div> */}
+          </div>
 
           {/* Image Section */}
-          {/* <div className="h-3/4 sm:h-1/4 flex-col md:flex justify-center items-center hidden">
+          <div className="flex-col md:flex justify-center items-center hidden">
             <motion.div
               initial={{ scale: 0.8, opacity: 0 }}
               whileInView={{ scale: 1, opacity: 1 }}
@@ -98,23 +98,11 @@ const Banner = () => {
               <Image
                 src={headerImg}
                 alt="Header"
-                className="h-[75%] animate-updown bg-gradient-to-r rounded-full"
+                className="max-h-[300px] max-w-[300px] h-[75%] animate-updown bg-gradient-to-r rounded-full"
                 priority
               />
             </motion.div>
-            <motion.div
-              initial={{ scale: 0.8, opacity: 0 }}
-              whileInView={{ scale: 1, opacity: 1 }}
-              transition={{ duration: 0.7 }}
-            >
-              <Image
-                src={headerImg}
-                alt="Header"
-                className="h-[75%] animate-updown bg-gradient-to-r rounded-full"
-                priority
-              />
-            </motion.div>
-          </div> */}
+          </div>
         </div>
       </div>
     </section>
