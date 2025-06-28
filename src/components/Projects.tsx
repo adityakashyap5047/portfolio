@@ -35,31 +35,32 @@ const Projects = () => {
         </p>
 
         {/* Tab Buttons */}
-        <div className="flex justify-center items-center w-[72%] !mx-auto rounded-full overflow-hidden bg-white/10 !mb-12">
-          {tabs.map(({ key, label }, idx) => {
-            const isActive = activeTab === key;
-            const radiusClass =
-              idx === 0
-                ? "rounded-l-full"
-                : idx === tabs.length - 1
-                ? "rounded-r-full"
-                : "";
+        <div className="relative w-[72%] !mx-auto !mb-12 border border-white/50 rounded-full bg-white/10 flex overflow-hidden">
+  {tabs.map(({ key, label }, idx) => {
+    const isActive = activeTab === key;
+    const radiusClass =
+      idx === 0
+        ? "rounded-l-full"
+        : idx === tabs.length - 1
+        ? "rounded-r-full"
+        : "";
 
-            return (
-              <button
-                key={key}
-                onClick={() => setActiveTab(key)}
-                className={`w-1/3 py-4 text-sm font-medium transition-all z-10 ${radiusClass} ${
-                  isActive
-                    ? "bg-gradient-to-r from-[#AA367C] to-[#4A2FBD] border border-white text-white"
-                    : "text-white"
-                }`}
-              >
-                {label}
-              </button>
-            );
-          })}
-        </div>
+    return (
+      <button
+        key={key}
+        onClick={() => setActiveTab(key)}
+        className={`w-1/3 !py-3 text-sm font-medium cursor-pointer transition-all duration-300 z-10 !border-r !border-white/50 last:border-r-0 ${radiusClass} ${
+          isActive
+            ? "bg-gradient-to-r from-[#AA367C] to-[#4A2FBD] text-white"
+            : "bg-transparent text-white/80 hover:text-white"
+        }`}
+      >
+        {label}
+      </button>
+    );
+  })}
+</div>
+
 
         {/* Tab Content */}
         {activeTab === "first" && (
@@ -79,7 +80,8 @@ const Projects = () => {
 
         {activeTab === "third" && (
           <p className="text-gray-400 max-w-xl mx-auto">
-            Hello
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque quam,
+            quod neque provident velit, rem explicabo excepturi.
           </p>
         )}
       </div>
