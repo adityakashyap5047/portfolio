@@ -3,7 +3,7 @@ import Banner from '@/components/Banner';
 import Projects from '@/components/Projects';
 import Contact from '@/components/Contact';
 import { Footer } from '@/components/Footer';
-import SkillsSection from '@/components/SkillSection';
+import Skills from '@/components/Skills';
 import Experience from '@/components/Experience';
 
 function App() {
@@ -11,9 +11,8 @@ function App() {
     <div className="App">
       <NavBar />
       <Banner />
-      <SkillsSection />
+      <Skills />
       <Experience />
-      {/* <Skills /> */}
       <Projects />
       <Contact />
       <Footer />
