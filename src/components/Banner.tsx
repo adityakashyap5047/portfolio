@@ -57,7 +57,6 @@ const Banner = () => {
               initial={{ opacity: 0, y: 40 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6 }}
-              viewport={{ once: true }}
             >
               <span className="inline-block mb-4 font-bold text-[20px] tracking-wide border border-white border-opacity-50 px-4 py-2 bg-gradient-to-r from-[#AA367C]/50 to-[#4A2FBD]/50">
                 Welcome to my Portfolio
@@ -86,7 +85,6 @@ const Banner = () => {
               initial={{ scale: 0.8, opacity: 0 }}
               whileInView={{ scale: 1, opacity: 1 }}
               transition={{ duration: 0.7 }}
-              viewport={{ once: true }}
             >
               <Image
                 src={headerImg}
