@@ -3,12 +3,13 @@
 import { WorkflowIcon } from 'lucide-react';
 import { VerticalTimeline, VerticalTimelineElement }  from 'react-vertical-timeline-component';
 import 'react-vertical-timeline-component/style.min.css';
+import TimelineElement from './TimelineElement';
 
 const Experience = () => {
   return (
-
-<VerticalTimeline lineColor="rgb(33, 150, 243)" className="bg-amber-200">
-  <VerticalTimelineElement
+    <section style={{backgroundImage: 'radial-gradient(circle, #5c0067 0%, #082567 100%)'}}>
+      <VerticalTimeline lineColor="rgb(33, 150, 243)">
+  {/* <VerticalTimelineElement
     className="vertical-timeline-element--work"
     contentStyle={{ background: 'rgb(33, 150, 243)', color: '#fff' }}
     contentArrowStyle={{ borderRight: '7px solid  rgb(33, 150, 243)' }}
@@ -21,7 +22,8 @@ const Experience = () => {
     <p>
       Creative Direction, User Experience, Visual Design, Project Management, Team Leading
     </p>
-  </VerticalTimelineElement>
+  </VerticalTimelineElement> */}
+  <TimelineElement />
   <VerticalTimelineElement
     className="vertical-timeline-element--work"
     date="2010 - 2011"
@@ -95,6 +97,7 @@ const Experience = () => {
     </p>
   </VerticalTimelineElement>
 </VerticalTimeline>
+    </section>
   );
 }
 

@@ -68,7 +68,8 @@ export const Contact = () => {
 
   return (
     <section
-      className="bg-gradient-to-r from-[#AA367C] to-[#4A2FBD] !py-16 !px-4"
+      className="py-16 px-4" 
+      style={{backgroundImage: 'radial-gradient(circle, #5c0067 0%, #00d4ff 100%)'}}
       id="connect"
     >
       <div className="!max-w-7xl !mx-auto flex flex-col md:flex-row items-center gap-8">
