@@ -26,11 +26,11 @@ const NavBar = () => {
 
   return (
     <nav
-      className={`fixed top-0 w-full z-[9999] transition-all duration-300 !py-5 ${
+      className={`fixed top-0 w-full z-[9999] transition-all duration-300 py-5 ${
         scrolled ? "bg-gradient-to-r from-[#AA367C] to-[#4A2FBD] shadow-md" : "bg-transparent"
       }`}
     >
-      <div className="container !px-4 flex justify-between items-center">
+      <div className="px-8 flex justify-between items-center">
         {/* Logo */}
         <Link href="/">
           <Image src={logo} alt="Logo" className="w-12 cursor-pointer" />
@@ -81,17 +81,18 @@ const NavBar = () => {
           ))}
 
           {/* Button */}
-          <a href="#connect" className="!mt-4 md:!mt-0 md:!ml-6">
-            <button className="cursor-pointer relative hover:text-black !border border-white text-white font-bold text-[18px] !px-8 !py-3 transition-all duration-300 overflow-hidden group">
-              <div className="flex items-center gap-6">
-                <span className="z-10 relative">Let{`'`}s Connect </span>
-                <span>
-                  <ArrowRight size={20} strokeWidth={4} className="hover:text-black"/>
+          <a href="#connect" className="mt-4 md:mt-0 md:ml-6">
+            <button className="cursor-pointer rounded-md w-52 relative hover:text-black border border-white text-white font-bold text-lg px-6 py-3 transition-all duration-300 overflow-hidden group">
+              <div className="flex items-center gap-6 relative z-10">
+                <span>Let{`'`}s Connect</span>
+                <span className="transform transition-transform duration-300 group-hover:translate-x-2 group-hover:text-black">
+                  <ArrowRight size={20} strokeWidth={4} />
                 </span>
               </div>
               <span className="absolute inset-0 bg-white scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left z-0"></span>
             </button>
           </a>
+
         </div>
       </div>
     </nav>
