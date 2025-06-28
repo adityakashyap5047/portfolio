@@ -3,10 +3,10 @@
 import { useState, useEffect } from "react";
 import Image from "next/image";
 import { motion } from "framer-motion";
-import headerImg from "@/assets/img/header-img.svg";
+import headerImg from "@/assets/img/headerImage.jpg";
 import bgImage from "@/assets/img/banner-bg.png";
 
-const toRotate = ["Web Developer", "Web Designer", "UI/UX Designer"];
+const toRotate = ["Full-Stack Developer", "AI/ML Engineer", "UI/UX Designer"];
 const period = 1000;
 
 const Banner = () => {
@@ -43,15 +43,15 @@ const Banner = () => {
   return (
     <section
       id="home"
-      className="relative min-h-screen bg-cover bg-top bg-no-repeat lg:!px-16 !py-16 md:!py-28"
+      className="relative min-h-screen bg-cover bg-top bg-no-repeat !px-6 sm:!px-16 !py-8"
       style={{
         backgroundImage: `url(${bgImage.src})`,
       }}
     >
-      <div className="max-w-7xl mx-auto !mt-4 md:!mt-24 !px-4 sm:!px-6 lg:!px-8">
-        <div className="flex flex-col-reverse md:flex-row items-center gap-10">
+      <div className="max-w-7xl mx-auto !mt-4 md:!mt-24">
+        {/* <div className="flex flex-col-reverse md:flex-row items-center justify-between"> */}
           {/* Text Section */}
-          <div className="w-full md:w-1/2">
+          <div className="w-full md:w-2/3">
             <motion.div
               initial={{ opacity: 0, y: 40 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -62,16 +62,19 @@ const Banner = () => {
               </span>
 
               <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white leading-tight my-6">
-                Hi! I am Judy{" "}
+                Hi! I am Aditya Kumar,{" "}<br />
                 <span className="border-r-2 border-gray-400 pr-1">
                   {text}
                 </span>
               </h1>
 
-              <p className="text-gray-300 text-base sm:text-lg md:text-lg leading-relaxed !my-8 max-w-xl">
-                I am passionate about building excellent software that improves
-                the lives of those around me. Let’s build something together!
-              </p>
+              <p className="text-gray-300 text-base sm:text-lg md:text-lg leading-relaxed !my-8">
+  I’m <strong>Aditya Kumar</strong>, a dedicated full-stack developer and AI enthusiast.
+
+  <br /><br />
+  I specialize in <strong>full-stack web development</strong>, with hands-on experience in technologies such as <strong>HTML5, CSS3, JavaScript, React.js, Next.js, Node.js, Express.js, Django, MySQL,</strong> and <strong>MongoDB</strong>. I am proficient in designing robust RESTful and GraphQL APIs, and adept with modern version control and DevOps tools including <strong>Git, GitHub, GitLab, Vercel, Netlify, Docker</strong>, and <strong>Render</strong>.
+</p>
+
 
               <a href="#connect">
                 <button className="relative cursor-pointer !border border-white text-white font-bold text-base sm:text-lg !px-6 !py-3 rounded-lg overflow-hidden group transition-all duration-300">
@@ -83,10 +86,10 @@ const Banner = () => {
                 </button>
               </a>
             </motion.div>
-          </div>
+          {/* </div> */}
 
           {/* Image Section */}
-          <div className="w-3/4 sm:w-1/2 !pl-12 flex justify-center">
+          {/* <div className="h-3/4 sm:h-1/4 flex-col md:flex justify-center items-center hidden">
             <motion.div
               initial={{ scale: 0.8, opacity: 0 }}
               whileInView={{ scale: 1, opacity: 1 }}
@@ -95,11 +98,23 @@ const Banner = () => {
               <Image
                 src={headerImg}
                 alt="Header"
-                className="w-[85%] md:w-auto animate-updown"
+                className="h-[75%] animate-updown bg-gradient-to-r rounded-full"
                 priority
               />
             </motion.div>
-          </div>
+            <motion.div
+              initial={{ scale: 0.8, opacity: 0 }}
+              whileInView={{ scale: 1, opacity: 1 }}
+              transition={{ duration: 0.7 }}
+            >
+              <Image
+                src={headerImg}
+                alt="Header"
+                className="h-[75%] animate-updown bg-gradient-to-r rounded-full"
+                priority
+              />
+            </motion.div>
+          </div> */}
         </div>
       </div>
     </section>

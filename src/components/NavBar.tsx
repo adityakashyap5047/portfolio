@@ -63,7 +63,7 @@ const NavBar = () => {
 
         {/* Links */}
         <div
-          className={`flex-col md:flex-row md:flex items-center md:space-x-8 absolute md:static left-0 top-full w-full md:w-auto bg-[#121212] md:bg-transparent transition-all duration-300 ease-in-out ${
+          className={`flex-col md:flex-row md:flex items-center md:space-x-8 absolute md:static left-0 top-full bg-[#121212] md:bg-transparent transition-all duration-300 ease-in-out ${
             menuOpen ? "flex" : "hidden md:flex"
           }`}
         >
