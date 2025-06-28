@@ -26,9 +26,15 @@ const NavBar = () => {
 
   return (
     <nav
-      className={`fixed top-0 w-full z-[9999] transition-all duration-300 py-5 ${
-        scrolled ? "bg-gradient-to-r from-[#AA367C] to-[#4A2FBD] shadow-md" : "bg-transparent"
-      }`}
+      className={`fixed top-0 w-full z-[9999] transition-all duration-300 py-5 
+        ${
+          scrolled ? "bg-gradient-to-r from-[#AA367C] to-[#4A2FBD] shadow-md" : "md:bg-none md:bg-transparent"
+        }
+        ${
+          menuOpen ? "bg-gradient-to-r from-[#AA367C] to-[#4A2FBD] shadow-md" : "bg-transparent"
+        }
+        `
+      }
     >
       <div className="px-8 flex justify-between items-center">
         {/* Logo */}
@@ -38,7 +44,7 @@ const NavBar = () => {
 
         {/* Mobile Toggler */}
         <button
-          className="md:hidden text-white relative focus:outline-none"
+          className="md:hidden cursor-pointer text-white relative focus:outline-none"
           onClick={() => setMenuOpen(!menuOpen)}
           aria-expanded={menuOpen}
         >
@@ -63,7 +69,7 @@ const NavBar = () => {
 
         {/* Links */}
         <div
-          className={`flex-col md:flex-row md:flex items-center md:space-x-8 absolute md:static left-0 top-full bg-[#121212] md:bg-transparent transition-all duration-300 ease-in-out ${
+          className={`min-w-screen md:min-w-0 flex-col  md:flex-row md:flex items-center md:space-x-4 absolute md:static left-0 top-full bg-gradient-to-r from-[#AA367C] to-[#4A2FBD] md:bg-none md:bg-transparent transition-all duration-300 ease-in-out ${
             menuOpen ? "flex" : "hidden md:flex"
           }`}
         >
@@ -72,7 +78,7 @@ const NavBar = () => {
               key={link}
               href={`#${link}`}
               onClick={() => handleClick(link)}
-              className={`block py-2 md:py-0 font-medium text-white text-[18px] tracking-wide transition-opacity duration-200 ${
+              className={`block py-2 md:py-0 font-medium text-white text-lg tracking-wide transition-opacity duration-200 ${
                 activeLink === link ? "opacity-100" : "opacity-75"
               } hover:opacity-100`}
             >
@@ -81,7 +87,7 @@ const NavBar = () => {
           ))}
 
           {/* Button */}
-          <a href="#connect" className="mt-4 md:mt-0 md:ml-6">
+          <a href="#connect" className="my-4 md:my-0 ">
             <button className="cursor-pointer rounded-md w-52 relative hover:text-black border border-white text-white font-bold text-lg px-6 py-3 transition-all duration-300 overflow-hidden group">
               <div className="flex items-center gap-6 relative z-10">
                 <span>Let{`'`}s Connect</span>
