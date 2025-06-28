@@ -5,6 +5,7 @@ import Link from "next/link";
 import Image from "next/image";
 import logo from "@/assets/img/logo.svg";
 import { ArrowRight } from 'lucide-react';
+import { FiMenu, FiX } from "react-icons/fi";
 
 const NavBar = () => {
   const [activeLink, setActiveLink] = useState("home");
@@ -44,27 +45,11 @@ const NavBar = () => {
 
         {/* Mobile Toggler */}
         <button
-          className="md:hidden cursor-pointer text-white relative focus:outline-none"
+          className="md:hidden cursor-pointer text-2xl text-white relative focus:outline-none"
           onClick={() => setMenuOpen(!menuOpen)}
           aria-expanded={menuOpen}
         >
-          <div className="relative w-6 h-4">
-            <span
-              className={`absolute h-[2px] w-6 bg-white left-0 top-0 transition-transform duration-300 ${
-                menuOpen ? "rotate-45 top-1.5" : ""
-              }`}
-            ></span>
-            <span
-              className={`absolute h-[2px] w-6 bg-white left-0 top-2 transition-opacity duration-300 ${
-                menuOpen ? "opacity-0" : ""
-              }`}
-            ></span>
-            <span
-              className={`absolute h-[2px] w-6 bg-white left-0 top-4 transition-transform duration-300 ${
-                menuOpen ? "-rotate-45 top-1.5" : ""
-              }`}
-            ></span>
-          </div>
+            {menuOpen ? <FiX /> : <FiMenu />}
         </button>
 
         {/* Links */}
