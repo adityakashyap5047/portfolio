@@ -25,35 +25,39 @@ export const Newsletter = ({ status, message, onValidated }: Props) => {
   };
 
   return (
-    <div className="max-w-5xl mx-auto px-4 py-16">
-      <div className="bg-white text-black rounded-[55px] p-10 md:p-20 mb-20 -mt-28">
+    <div className="!max-w-5xl !mx-auto !px-4 !py-16">
+      <div className="bg-white text-black rounded-[12px] !p-10 md:!p-20 !-mt-28">
         <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-6">
-          <div className="md:w-1/2">
+          <div className="md:!w-1/2">
             <h3 className="font-bold text-2xl md:text-3xl leading-snug mb-4">
               Subscribe to our Newsletter
               <br /> & Never miss latest updates
             </h3>
-            {status === "sending" && <p>Sending...</p>}
-            {status === "error" && <p className="text-red-500">{message}</p>}
-            {status === "success" && <p className="text-green-500">{message}</p>}
-          </div>
-          <div className="md:w-1/2">
-            <form onSubmit={handleSubmit} className="relative bg-white rounded-[20px] flex items-center px-4 py-2">
-              <div className="absolute inset-0 rounded-[20px] bg-gradient-to-r from-[#AA367C] to-[#4A2FBD] -z-10"></div>
-              <input
-                type="email"
-                value={email}
-                onChange={(e) => setEmail(e.target.value)}
-                placeholder="Email Address"
-                className="flex-grow bg-transparent text-black font-medium px-2 outline-none"
-              />
-              <button
-                type="submit"
-                className="bg-gradient-to-r from-[#AA367C] to-[#4A2FBD] text-white font-medium px-8 py-3 rounded-[18px] ml-2"
-              >
-                Submit
-              </button>
-            </form>
+            </div>
+          <div className="md:!w-1/2">
+            <div className="!p-[2px] rounded-[5px] bg-gradient-to-r from-[#AA367C] to-[#4A2FBD]">
+  <form
+    onSubmit={handleSubmit}
+    className="flex flex-wrap gap-4 items-center bg-white rounded-[5px] !px-4 !py-2"
+  >
+    <input
+      type="email"
+      value={email}
+      onChange={(e) => setEmail(e.target.value)}
+      placeholder="Email Address"
+      className="flex-grow bg-transparent text-black font-medium !px-2 outline-none"
+    />
+    <button
+      type="submit"
+      className="cursor-pointer bg-gradient-to-r from-[#AA367C] to-[#4A2FBD] text-white font-medium !px-6 !py-2 rounded-[5px] !ml-2"
+    >
+      Submit
+    </button>  
+  </form>
+    {status === "sending" && <p className="text-blue-500 !pt-4 text-xl font-bold">Sending...</p>}
+    {status === "error" && <p className="text-red-500 !pt-4 text-xl font-bold">{message}</p>}
+    {status === "success" && <p className="text-green-500 !pt-4 text-xl font-bold">{message}</p>}
+</div>
           </div>
         </div>
       </div>
