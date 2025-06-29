@@ -2,7 +2,6 @@
 import React from "react";
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { easeInOut } from "framer-motion";
 import {
   FaHtml5, FaCss3Alt, FaJs, FaReact, FaNodeJs,
   FaPython, FaDocker, FaGithub,
@@ -57,12 +56,12 @@ export default function Skills() {
       animate: {
         opacity: 1,
         y: 0,
-        transition: { duration: 0.5, ease: easeInOut },
+        transition: { duration: 0.5, ease: "easeInOut" },
       },
     exit: (dir: string) => ({
       opacity: 0,
       y: dir === "down" ? 50 : -50,
-      transition: { duration: 0.5, ease: easeInOut },
+      transition: { duration: 0.5, ease: "easeInOut" },
     }),
     }),
   };
@@ -74,7 +73,7 @@ export default function Skills() {
     >
       <div className="max-w-[1200px] bg-blue-900/90 rounded-sm shadow-sm px-4 mx-auto text-center">
         <h2 className="text-[45px] text-white font-bold">My Skills</h2>
-        <p className="text-[#bfdd13] text-[18px] leading-relaxed tracking-wide !my-12 !ml-auto !mr-auto sm:max-w-[56%] mx-auto">
+        <p className="text-[#bfdd13] text-[18px] leading-relaxed tracking-wide my-12 ml-auto mr-auto sm:max-w-[56%] mx-auto">
           Lorem Ipsum is simply dummy text of the printing and typesetting
           industry. Lorem Ipsum has been the industry standard dummy text ever
           since the 1500s, when an unknown printer took a galley of type and
