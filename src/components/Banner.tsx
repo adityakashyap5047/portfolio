@@ -43,34 +43,24 @@ const Banner = () => {
       id="home"
       className="relative bg-[#021024] min-h-screen bg-cover bg-top bg-no-repeat px-6 sm:px-16 py-8"
     >
-      <div className="max-w-7xl mx-auto !mt-4 md:!mt-24">
-        <div className="flex items-center justify-between">
+      <div className="max-w-7xl mx-auto mt-4 md:mt-24">
+        <div className="flex gap-8 md:flex-row flex-col-reverse">
           {/* Text Section */}
-          <div className="w-full md:w-2/3">
+          <div className="mt-16">
             <motion.div
               initial={{ opacity: 0, y: 40 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6 }}
             >
-              <span className="inline-block !mb-12 font-semibold text-sm md:text-base tracking-wide border border-white/40 !px-4 !py-2 bg-gradient-to-r from-[#AA367C]/40 to-[#4A2FBD]/40 rounded-md">
-                Welcome to my Portfolio
-              </span>
-
               <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white leading-tight my-6">
                 Hi! I am Aditya Kumar,{" "}<br />
                 <span className="border-r-2 border-gray-400 pr-1">
                   {text}
                 </span>
               </h1>
-
-              <p className="text-gray-300 text-base sm:text-lg md:text-lg leading-relaxed !my-8">
-  I’m <strong>Aditya Kumar</strong>, a dedicated full-stack developer and AI enthusiast.
-
-  <br /><br />
-  I specialize in <strong>full-stack web development</strong>, with hands-on experience in technologies such as <strong>HTML5, CSS3, JavaScript, React.js, Next.js, Node.js, Express.js, Django, MySQL,</strong> and <strong>MongoDB</strong>. I am proficient in designing robust RESTful and GraphQL APIs, and adept with modern version control and DevOps tools including <strong>Git, GitHub, GitLab, Vercel, Netlify, Docker</strong>, and <strong>Render</strong>.
-</p>
-
-
+              <p className="text-gray-300 text-base sm:text-lg md:text-lg leading-relaxed my-8">
+                I specialize in <strong>full-stack web development</strong>, with hands-on experience in technologies such as <strong>HTML5, CSS3, JavaScript, React.js, Next.js, Node.js, Express.js, Django, MySQL,</strong> and <strong>MongoDB</strong>. I am proficient in designing robust RESTful and GraphQL APIs, and adept with modern version control and DevOps tools including <strong>Git, GitHub, GitLab, Vercel, Netlify, Docker</strong>, and <strong>Render</strong>.
+              </p>
               <a href="#connect">
                 <button className="relative cursor-pointer !border border-white text-white font-bold text-base sm:text-lg !px-6 !py-3 rounded-lg overflow-hidden group transition-all duration-300">
                   <span className="relative z-10">My Resume</span>
@@ -90,13 +80,7 @@ const Banner = () => {
               whileInView={{ scale: 1, opacity: 1 }}
               transition={{ duration: 0.7 }}
             >
-              {/* <Image
-                src={headerImg}
-                alt="Header"
-                className="max-h-[300px] max-w-[300px] h-[75%] animate-updown bg-gradient-to-r rounded-full"
-                priority
-              /> */}
-              <MainImage className="animate-updown"/>
+              <MainImage animate="animate-updown" className="w-45 h-45 md:w-70 md:h-70" containerClassName="w-50 h-50 md:w-75 md:h-75"/>
             </motion.div>
           </div>
         </div>

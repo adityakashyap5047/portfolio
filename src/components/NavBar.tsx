@@ -2,10 +2,9 @@
 
 import { useState, useEffect } from "react";
 import Link from "next/link";
-import Image from "next/image";
-import logo from "@/assets/img/logo.svg";
 import { ArrowRight } from 'lucide-react';
 import { FiMenu, FiX } from "react-icons/fi";
+import MainImage from "./MainImage";
 
 const NavBar = () => {
   const [activeLink, setActiveLink] = useState("home");
@@ -29,7 +28,7 @@ const NavBar = () => {
     <nav
       className={`fixed top-0 w-full z-[9999] transition-all duration-300 py-5 
         ${
-          scrolled ? "bg-gradient-to-r from-[#AA367C] to-[#4A2FBD] shadow-md" : "md:bg-none md:bg-transparent"
+          scrolled ? "bg-gradient-to-r from-[#AA367C] to-[#78777c] shadow-md" : "md:bg-none md:bg-transparent"
         }
         ${
           menuOpen ? "bg-gradient-to-r from-[#AA367C] to-[#4A2FBD] shadow-md" : "bg-transparent"
@@ -40,7 +39,7 @@ const NavBar = () => {
       <div className="px-8 flex justify-between items-center">
         {/* Logo */}
         <Link href="/">
-          <Image src={logo} alt="Logo" className="w-12 cursor-pointer" />
+          <MainImage className="w-12 h-12" containerClassName="w-16 h-16"/>
         </Link>
 
         {/* Mobile Toggler */}
