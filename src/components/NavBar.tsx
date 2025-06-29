@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from "react";
 import Link from "next/link";
-import { ArrowRight } from 'lucide-react';
+import { ArrowRight } from "lucide-react";
 import { FiMenu, FiX } from "react-icons/fi";
 import MainImage from "./MainImage";
 
@@ -26,20 +26,17 @@ const NavBar = () => {
 
   return (
     <nav
-      className={`fixed top-0 w-full z-[9999] transition-all duration-300 py-5 
+      className={`fixed top-0 w-full z-[9999] transition-all duration-300 py-5
         ${
-          scrolled ? "bg-gradient-to-r from-[#AA367C] to-[#78777c] shadow-md" : "md:bg-none md:bg-transparent"
-        }
-        ${
-          menuOpen ? "bg-gradient-to-r from-[#AA367C] to-[#4A2FBD] shadow-md" : "bg-transparent"
-        }
-        `
-      }
+          scrolled || menuOpen
+            ? "bg-[#021024]/60 backdrop-blur-md border-b border-white/10 shadow-md"
+            : "bg-transparent"
+        }`}
     >
       <div className="px-8 flex justify-between items-center">
         {/* Logo */}
         <Link href="/">
-          <MainImage className="w-12 h-12" containerClassName="w-16 h-16"/>
+          <MainImage className="w-12 h-12" containerClassName="w-16 h-16" />
         </Link>
 
         {/* Mobile Toggler */}
@@ -48,14 +45,12 @@ const NavBar = () => {
           onClick={() => setMenuOpen(!menuOpen)}
           aria-expanded={menuOpen}
         >
-            {menuOpen ? <FiX /> : <FiMenu />}
+          {menuOpen ? <FiX /> : <FiMenu />}
         </button>
 
         {/* Links */}
         <div
-          className={`min-w-screen md:min-w-0 flex-row md:flex justify-evenly items-center md:space-x-4 absolute md:static left-0 top-full bg-gradient-to-r from-[#AA367C] to-[#4A2FBD] md:bg-none md:bg-transparent transition-all duration-300 ease-in-out ${
-            menuOpen ? "flex" : "hidden md:flex"
-          }`}
+          className={`absolute md:static left-0 top-full w-full md:w-auto transition-all duration-300 ease-in-out ${menuOpen ? "flex" : "hidden"} md:flex justify-evenly items-center bg-[#021024]/80 max-md-backdrop-blur-md border-t border-white/10 md:bg-transparent md:border-none`}
         >
           <div className="flex gap-4 md:flex-row flex-col pb-4 md:pb-0">
             {["home", "skills", "experience", "projects", "contact"].map((link) => (
@@ -63,25 +58,26 @@ const NavBar = () => {
                 key={link}
                 href={`#${link}`}
                 onClick={() => handleClick(link)}
-                className={`block py-2 md:py-0 font-medium text-white text-lg tracking-wide transition-opacity duration-200 ${
+                className={`block py-2 md:py-0 font-medium text-white text-lg tracking-wide transition-all duration-200 ${
                   activeLink === link ? "opacity-100" : "opacity-75"
-                } hover:text-[#00e0ff] hover:scale-110 opacity-100`}
+                }
+                hover:text-[#00e0ff] hover:scale-110`}
               >
                 {link.charAt(0).toUpperCase() + link.slice(1)}
               </a>
             ))}
           </div>
-          <div className="py-4 md:py-0">
+          <div className="py-4 md:py-0 pl-4">
             {/* Button */}
             <a href="https://linktr.ee/adityakashyap5047" target="_blank">
-              <button className="cursor-pointer rounded-md w-52 relative hover:text-black border border-white text-white font-bold text-lg px-6 py-3 transition-all duration-300 overflow-hidden group">
+              <button className="cursor-pointer rounded-md w-52 relative text-white font-bold text-lg px-6 py-3 overflow-hidden group border border-white/20 backdrop-blur-md bg-white/10 hover:text-black transition-all duration-300">
                 <div className="flex items-center gap-6 relative z-10">
                   <span>Let{`'`}s Connect</span>
                   <span className="transform transition-transform duration-300 group-hover:translate-x-2 group-hover:text-black">
                     <ArrowRight size={20} strokeWidth={4} />
                   </span>
                 </div>
-                <span className="absolute inset-0 bg-white scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left z-0"></span>
+                <span className="absolute inset-0 bg-[#00e0ff]/90 scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left z-0" />
               </button>
             </a>
           </div>
