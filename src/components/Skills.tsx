@@ -71,7 +71,7 @@ export default function Skills() {
   id="skills"
   className="relative [background-image:repeating-linear-gradient(-45deg,#0faacc_0px,#f34f39_80px,#000_80px,#000_160px)] overflow-hidden"
 >
-  <div className="bg-blue-900/90 rounded-sm shadow-sm px-4 mx-auto text-center">
+  <div className="bg-gray-900/90 rounded-sm shadow-sm px-4 mx-auto text-center">
     <h2 className="text-[45px] text-white font-bold pt-24">My Skills</h2>
     <p className="text-[#bfdd13] text-[18px] leading-relaxed tracking-wide my-12 ml-auto mr-auto sm:max-w-[43%] mx-auto">
       Lorem Ipsum is simply dummy text of the printing and typesetting
