@@ -6,7 +6,7 @@ import TimelineElement from './TimelineElement';
 
 const Experience = () => {
   return (
-    <section id='experience'style={{backgroundImage: 'radial-gradient(circle, #5c0067 0%, #082567 100%)'}}>
+    <section id='experience'style={{backgroundImage: 'radial-gradient(circle, #00e0ff 0%, #021024 100%)'}}>
       <div className="max-w-[1200px] pt-24 px-4 mx-auto text-center">
         <h2 className="text-5xl text-white font-bold">Experience</h2>
         <p className="text-[#B8B8B8] text-[18px] leading-relaxed tracking-wide !my-12 !ml-auto !mr-auto sm:max-w-[56%] mx-auto">

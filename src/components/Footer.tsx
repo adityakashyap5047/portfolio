@@ -1,31 +1,78 @@
-// components/Footer.tsx
-import Image from "next/image";
-import { MailchimpForm } from "@/components/MailchimpForm";
-import logo from "@/assets/img/logo.svg";
+"use client";
 
-import bgImage from "@/assets/img/footer-bg.png";
-import { FaGithub, FaLinkedin, FaSquareInstagram, FaXTwitter } from "react-icons/fa6";
-import { SiGmail } from "react-icons/si";
+import { FaGithub, FaLinkedin, FaTwitter } from "react-icons/fa";
+import { MdEmail } from "react-icons/md";
+import MainImage from "./MainImage";
 
-export const Footer = () => {
+const Footer = () => {
   return (
-    <footer className="bg-cover bg-center bg-no-repeat pb-12 sm:px-12" style={{ backgroundImage: `url(${bgImage.src})` }}>
-      <MailchimpForm />
-      <div className="container !mx-auto !px-4 flex flex-col sm:flex-row items-center justify-between">
-        <div className="sm:!w-1/2 !w-full !mb-4 sm:!mb-0">
-          <Image src={logo} alt="Logo" className="w-1/3" />
-        </div>
-        <div className="sm:w-1/2 w-full text-center sm:text-right">
-          <div className="flex text-white justify-center sm:justify-end space-x-4">
-            <FaGithub className="cursor-pointer text-2xl hover:text-3xl"/>
-            <FaLinkedin className="cursor-pointer text-2xl hover:text-3xl"/>
-            <SiGmail className="cursor-pointer text-2xl hover:text-3xl"/>
-            <FaSquareInstagram className="cursor-pointer text-2xl hover:text-3xl"/>
-            <FaXTwitter className="cursor-pointer text-2xl hover:text-3xl"/>
+    <footer className="text-white py-12 px-6 md:px-20" style={{backgroundImage: 'radial-gradient(circle, #00e0ff 0%, #021024 100%)'}}>
+      <div className="max-w-screen-xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-10">
+        {/* Left Section */}
+        <div>
+          <div className="flex items-center space-x-3">
+            <MainImage className="w-12 h-12" containerClassName="w-16 h-16" />
+            <h1 className="text-2xl font-bold text-blue-200">Aditya Kumar</h1>
           </div>
-          <p className="text-sm text-gray-400 !mt-4">Copyright 2025 &copy; All Rights Reserved</p>
+          <p className="mt-4 text-gray-300">
+            Full-stack developer passionate about creating exceptional web
+            applications and sharing knowledge with the development community.
+          </p>
+        </div>
+
+        {/* Center Section */}
+        <div>
+          <h2 className="text-xl font-semibold mb-4">Quick Links</h2>
+          <ul className="space-y-2 text-gray-300">
+            <li>
+              <a href="#home" className="hover:text-white">Home</a>
+            </li>
+            <li>
+              <a href="#about" className="hover:text-white">About</a>
+            </li>
+            <li>
+              <a href="#projects" className="hover:text-white">Projects</a>
+            </li>
+            <li>
+              <a href="#contact" className="hover:text-white">Contact</a>
+            </li>
+          </ul>
+        </div>
+
+        {/* Right Section */}
+        <div>
+          <h2 className="text-xl font-semibold mb-4">Connect With Me</h2>
+          <ul className="space-y-3 text-gray-300">
+            <li className="flex items-center space-x-3">
+              <FaGithub size={20} />
+              <a href="https://github.com/yourusername" target="_blank" className="hover:text-white">GitHub</a>
+            </li>
+            <li className="flex items-center space-x-3">
+              <FaLinkedin size={20} />
+              <a href="https://linkedin.com/in/yourprofile" target="_blank" className="hover:text-white">LinkedIn</a>
+            </li>
+            <li className="flex items-center space-x-3">
+              <FaTwitter size={20} />
+              <a href="https://twitter.com/yourhandle" target="_blank" className="hover:text-white">Twitter</a>
+            </li>
+            <li className="flex items-center space-x-3">
+              <MdEmail size={20} />
+              <a href="mailto:youremail@example.com" className="hover:text-white">Email</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      {/* Bottom Line */}
+      <div className="border-t border-gray-700 mt-10 pt-6 flex flex-col md:flex-row items-center justify-between text-sm text-gray-400">
+        <p>© 2025 Aditya. All rights reserved.</p>
+        <div className="flex items-center space-x-2 mt-2 md:mt-0">
+          <span className="h-2 w-2 bg-green-500 rounded-full"></span>
+          <span>Open to opportunities</span>
         </div>
       </div>
     </footer>
   );
 };
+
+export default Footer;

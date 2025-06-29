@@ -2,7 +2,7 @@ import NavBar from '@/components/NavBar';
 import Banner from '@/components/Banner';
 import Projects from '@/components/Projects';
 import Contact from '@/components/Contact';
-import { Footer } from '@/components/Footer';
+import Footer  from '@/components/Footer';
 import Skills from '@/components/Skills';
 import Experience from '@/components/Experience';
 

@@ -69,7 +69,7 @@ export const Contact = () => {
   return (
     <section
       className="py-28 px-4" 
-      style={{backgroundImage: 'radial-gradient(circle, #5c0067 0%, #00d4ff 100%)'}}
+      style={{backgroundImage: 'radial-gradient(circle, #00e0ff -90%, #021024 100%)'}}
       id="contact"
     >
       <div className="!max-w-7xl !mx-auto flex flex-col md:flex-row items-center gap-8">
