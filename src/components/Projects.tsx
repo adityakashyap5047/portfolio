@@ -61,7 +61,7 @@ const Projects = () => {
     >
       <div className="max-w-[1200px] px-4 mx-auto text-center">
         <h2 className="text-[45px] font-bold">Projects</h2>
-        <p className="text-[#B8B8B8] text-[18px] leading-relaxed tracking-wide !my-12 !ml-auto !mr-auto sm:max-w-[56%] mx-auto">
+        <p className="text-[#00e0ff] text-[18px] leading-relaxed tracking-wide !my-12 !ml-auto !mr-auto sm:max-w-[56%] mx-auto">
           Lorem Ipsum is simply dummy text of the printing and typesetting
           industry. Lorem Ipsum has been the industry standard dummy text ever
           since the 1500s, when an unknown printer took a galley of type and
@@ -85,7 +85,7 @@ const Projects = () => {
                 onClick={() => setActiveTab(key)}
                 className={`w-1/3 !py-3 text-sm font-medium cursor-pointer transition-all duration-300 z-10 !border-r !border-white/50 last:border-r-0 ${radiusClass} ${
                   isActive
-                    ? "bg-gradient-to-r from-[#AA367C] to-[#4A2FBD] text-white"
+                    ? "bg-gradient-to-r from-[#114c54] to-[#170277] text-white"
                     : "bg-transparent text-white/80 hover:text-white"
                 }`}
               >

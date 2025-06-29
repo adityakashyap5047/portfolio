@@ -6,7 +6,7 @@ import MainImage from "./MainImage";
 
 const Footer = () => {
   return (
-    <footer className="text-white py-12 px-6 md:px-20" style={{backgroundImage: 'radial-gradient(circle, #00e0ff 0%, #021024 100%)'}}>
+    <footer className="text-white py-12 px-6 md:px-20" style={{backgroundImage: 'radial-gradient(circle, #0D3E85 0%, #021024 100%)'}}>
       <div className="max-w-screen-xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-10">
         {/* Left Section */}
         <div>

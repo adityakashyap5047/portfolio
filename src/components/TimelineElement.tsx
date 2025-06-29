@@ -7,18 +7,23 @@ export default function TimelineElement() {
     <VerticalTimelineElement
       className="vertical-timeline-element--work"
       contentStyle={{
-        background: "linear-gradient(to bottom right, #00c6ff, #9400d3)",
+        background: "rgba(2, 16, 36, 0.4)",
         color: "#fff",
-        borderRadius: "10px",
+        borderRadius: "12px",
         padding: "24px",
+        backdropFilter: "blur(10px)",
+        WebkitBackdropFilter: "blur(10px)",
+        border: "1px solid rgba(255, 255, 255, 0.1)",
+        boxShadow: "0 8px 32px 0 rgba( 31, 38, 135, 0.37 )"
       }}
       contentArrowStyle={{
-        borderRight: "7px solid #00c6ff",
+        borderRight: "7px solid rgba(2, 16, 36, 0.4)",
       }}
       date="April 2025"
       iconStyle={{
-        background: "#00c6ff",
+        background: "#00e0ff",
         color: "#fff",
+        boxShadow: "0 0 10px rgba(0, 224, 255, 0.7)",
       }}
       icon={<FaLaptopCode />}
     >
@@ -44,11 +49,11 @@ export default function TimelineElement() {
 
       <a
         href="#"
-        className="inline-block mt-6 px-5 py-2 border-2 border-white text-white font-semibold rounded-md relative group"
+        className="inline-block mt-6 px-5 py-2 border-2 border-white text-white font-semibold rounded-md relative group overflow-hidden"
       >
         <span className="relative z-10">Offer Letter</span>
         <span
-          className="absolute inset-0 bg-gradient-to-br from-[#00c6ff] to-[#9400d3] opacity-0 group-hover:opacity-100 rounded-md transition-all duration-300"
+          className="absolute inset-0 bg-[#066C65] backdrop-blur-md group-hover:bg-[#00e0ff] transition-all duration-300 z-0"
         ></span>
       </a>
     </VerticalTimelineElement>
