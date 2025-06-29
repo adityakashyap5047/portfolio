@@ -69,21 +69,21 @@ export default function Skills() {
   return (
     <section
   id="skills"
-  className="relative py-20 min-h-screen [background-image:repeating-linear-gradient(-45deg,#0faacc_0px,#f34f39_80px,#000_80px,#000_160px)] overflow-hidden"
+  className="relative [background-image:repeating-linear-gradient(-45deg,#0faacc_0px,#f34f39_80px,#000_80px,#000_160px)] overflow-hidden"
 >
-  <div className="max-w-[1200px] bg-blue-900/90 rounded-sm shadow-sm px-4 mx-auto text-center">
-    <h2 className="text-[45px] text-white font-bold">My Skills</h2>
-    <p className="text-[#bfdd13] text-[18px] leading-relaxed tracking-wide my-12 ml-auto mr-auto sm:max-w-[56%] mx-auto">
+  <div className="bg-blue-900/90 rounded-sm shadow-sm px-4 mx-auto text-center">
+    <h2 className="text-[45px] text-white font-bold pt-24">My Skills</h2>
+    <p className="text-[#bfdd13] text-[18px] leading-relaxed tracking-wide my-12 ml-auto mr-auto sm:max-w-[43%] mx-auto">
       Lorem Ipsum is simply dummy text of the printing and typesetting
       industry. Lorem Ipsum has been the industry standard dummy text ever
       since the 1500s, when an unknown printer took a galley of type and
       scrambled it to make a type specimen book.
     </p>
 
-    <div className="w-full flex items-center justify-center pb-4">
+    <div className="w-full flex items-center justify-center pb-12">
       <div className="bg-blue-500/90 flex flex-col sm:flex-row rounded-sm p-6 shadow-2xl sm:max-w-6xl w-full text-white gap-6">
         {/* Active Tab Label */}
-        <div className="flex justify-center items-center">
+        <div className="flex justify-center items-center sm:w-28">
           <p className="text-yellow-400 text-2xl font-bold sm:rotate-[-90deg]">
             {activeTab}
           </p>
