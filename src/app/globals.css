@@ -1,5 +1,10 @@
 @import "tailwindcss";
 
+@theme{
+  --breakpoint-xs: 27rem;
+  --breakpoint-xm: 52rem;
+}
+
 @layer utilities {
 
   /* Custom padding classes */

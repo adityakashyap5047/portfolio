@@ -117,7 +117,7 @@ function Geometry({ r, position, geometry, soundEffects, materials }) {
       x: `+=${gsap.utils.random(0, 2)}`,
       y: `+=${gsap.utils.random(0, 2)}`,
       z: `+=${gsap.utils.random(0, 2)}`,
-      duration: 1.3,
+      duration: 1.0,
       ease: "elastic.out(1,0.3)",
       yoyo: true,
     });
@@ -150,7 +150,7 @@ function Geometry({ r, position, geometry, soundEffects, materials }) {
 
   return (
     <group position={position} ref={meshRef}>
-      <Float speed={5 * r} rotationIntensity={6 * r} floatIntensity={5 * r}>
+      <Float speed={20 * r} rotationIntensity={20 * r} floatIntensity={20 * r}>
         <mesh
           geometry={geometry}
           onClick={handleClick}
