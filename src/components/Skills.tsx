@@ -69,11 +69,11 @@ export default function Skills() {
   return (
     <section
   id="skills"
-  className="relative [background-image:repeating-linear-gradient(-45deg,#0faacc_0px,#f34f39_80px,#000_80px,#000_160px)] overflow-hidden"
+  className="relative [background-image:repeating-linear-gradient(-45deg,#00e0ff_0px,#00e0ff_80px,#000_80px,#000_160px)] overflow-hidden"
 >
-  <div className="bg-gray-900/90 rounded-sm shadow-sm px-4 mx-auto text-center">
+  <div className="bg-[#021024]/90 rounded-sm shadow-sm px-4 mx-auto text-center">
     <h2 className="text-[45px] text-white font-bold pt-24">My Skills</h2>
-    <p className="text-[#bfdd13] text-[18px] leading-relaxed tracking-wide my-12 ml-auto mr-auto sm:max-w-[43%] mx-auto">
+    <p className="text-[#00e0ff] text-[18px] leading-relaxed tracking-wide my-12 ml-auto mr-auto sm:max-w-[43%] mx-auto">
       Lorem Ipsum is simply dummy text of the printing and typesetting
       industry. Lorem Ipsum has been the industry standard dummy text ever
       since the 1500s, when an unknown printer took a galley of type and
@@ -81,10 +81,10 @@ export default function Skills() {
     </p>
 
     <div className="w-full flex items-center justify-center pb-12">
-      <div className="bg-blue-500/90 flex flex-col sm:flex-row rounded-sm p-6 shadow-2xl sm:max-w-6xl w-full text-white gap-6">
+      <div className="bg-[#021024]/90 flex flex-col sm:flex-row rounded-sm p-6 shadow-2xl sm:max-w-6xl w-full text-white gap-6">
         {/* Active Tab Label */}
         <div className="flex justify-center items-center sm:w-28">
-          <p className="text-yellow-400 text-2xl font-bold sm:rotate-[-90deg]">
+          <p className="text-[#00e0ff] text-2xl font-bold sm:rotate-[-90deg]">
             {activeTab}
           </p>
         </div>
@@ -122,8 +122,8 @@ export default function Skills() {
               onClick={() => handleTabChange(idx)}
               className={`w-10 h-1 sm:w-1 sm:h-10 cursor-pointer rounded-full transition-all duration-300 ${
                 activeTabIndex === idx
-                  ? "bg-yellow-400 scale-110"
-                  : "bg-white/30 hover:bg-pink-400"
+                  ? "bg-[#00e0ff] scale-110"
+                  : "bg-white/30 hover:bg-[#00e1ff68] hover:scale-110"
               }`}
               aria-label={key}
             ></button>

@@ -53,36 +53,38 @@ const NavBar = () => {
 
         {/* Links */}
         <div
-          className={`min-w-screen md:min-w-0 flex-col  md:flex-row md:flex items-center md:space-x-4 absolute md:static left-0 top-full bg-gradient-to-r from-[#AA367C] to-[#4A2FBD] md:bg-none md:bg-transparent transition-all duration-300 ease-in-out ${
+          className={`min-w-screen md:min-w-0 flex-row md:flex justify-evenly items-center md:space-x-4 absolute md:static left-0 top-full bg-gradient-to-r from-[#AA367C] to-[#4A2FBD] md:bg-none md:bg-transparent transition-all duration-300 ease-in-out ${
             menuOpen ? "flex" : "hidden md:flex"
           }`}
         >
-          {["home", "skills", "experience", "projects", "contact"].map((link) => (
-            <a
-              key={link}
-              href={`#${link}`}
-              onClick={() => handleClick(link)}
-              className={`block py-2 md:py-0 font-medium text-white text-lg tracking-wide transition-opacity duration-200 ${
-                activeLink === link ? "opacity-100" : "opacity-75"
-              } hover:opacity-100`}
-            >
-              {link.charAt(0).toUpperCase() + link.slice(1)}
+          <div className="flex gap-4 md:flex-row flex-col pb-4 md:pb-0">
+            {["home", "skills", "experience", "projects", "contact"].map((link) => (
+              <a
+                key={link}
+                href={`#${link}`}
+                onClick={() => handleClick(link)}
+                className={`block py-2 md:py-0 font-medium text-white text-lg tracking-wide transition-opacity duration-200 ${
+                  activeLink === link ? "opacity-100" : "opacity-75"
+                } hover:text-[#00e0ff] hover:scale-110 opacity-100`}
+              >
+                {link.charAt(0).toUpperCase() + link.slice(1)}
+              </a>
+            ))}
+          </div>
+          <div className="py-4 md:py-0">
+            {/* Button */}
+            <a href="https://linktr.ee/adityakashyap5047" target="_blank">
+              <button className="cursor-pointer rounded-md w-52 relative hover:text-black border border-white text-white font-bold text-lg px-6 py-3 transition-all duration-300 overflow-hidden group">
+                <div className="flex items-center gap-6 relative z-10">
+                  <span>Let{`'`}s Connect</span>
+                  <span className="transform transition-transform duration-300 group-hover:translate-x-2 group-hover:text-black">
+                    <ArrowRight size={20} strokeWidth={4} />
+                  </span>
+                </div>
+                <span className="absolute inset-0 bg-white scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left z-0"></span>
+              </button>
             </a>
-          ))}
-
-          {/* Button */}
-          <a href="https://linktr.ee/adityakashyap5047" target="_blank" className="my-4 md:my-0 ">
-            <button className="cursor-pointer rounded-md w-52 relative hover:text-black border border-white text-white font-bold text-lg px-6 py-3 transition-all duration-300 overflow-hidden group">
-              <div className="flex items-center gap-6 relative z-10">
-                <span>Let{`'`}s Connect</span>
-                <span className="transform transition-transform duration-300 group-hover:translate-x-2 group-hover:text-black">
-                  <ArrowRight size={20} strokeWidth={4} />
-                </span>
-              </div>
-              <span className="absolute inset-0 bg-white scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left z-0"></span>
-            </button>
-          </a>
-
+          </div>
         </div>
       </div>
     </nav>
