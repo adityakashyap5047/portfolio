@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useState, useEffect, useCallback } from "react";
 import Image from "next/image";
 import { motion } from "framer-motion";
 import headerImg from "@/assets/img/header-img.svg";
@@ -15,12 +15,7 @@ const Banner = () => {
   const [text, setText] = useState("");
   const [delta, setDelta] = useState(300 - Math.random() * 100);
 
-  useEffect(() => {
-    const ticker = setInterval(() => tick(), delta);
-    return () => clearInterval(ticker);
-  }, [text]);
-
-  const tick = () => {
+  const tick = useCallback(() => {
     const i = loopNum % toRotate.length;
     const fullText = toRotate[i];
     const updatedText = isDeleting
@@ -38,7 +33,12 @@ const Banner = () => {
       setLoopNum(loopNum + 1);
       setDelta(500);
     }
-  };
+  }, [loopNum, isDeleting, text, delta]);
+
+  useEffect(() => {
+    const ticker = setInterval(() => tick(), delta);
+    return () => clearInterval(ticker);
+  }, [text, delta, tick]);
 
   return (
     <section
