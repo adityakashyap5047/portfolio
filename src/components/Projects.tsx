@@ -57,7 +57,7 @@ const Projects = () => {
   return (
     <section
       id="projects"
-      className="relative py-20 bg-black text-white overflow-hidden"
+      className="relative py-20 bg-[#021024] text-white overflow-hidden"
     >
       <div className="max-w-[1200px] px-4 mx-auto text-center">
         <h2 className="text-[45px] font-bold">Projects</h2>

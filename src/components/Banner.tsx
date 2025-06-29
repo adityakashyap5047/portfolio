@@ -1,10 +1,8 @@
 "use client";
 
 import { useState, useEffect, useCallback } from "react";
-import Image from "next/image";
 import { motion } from "framer-motion";
-import headerImg from "@/assets/img/header-img.svg";
-import bgImage from "@/assets/img/banner-bg.png";
+import MainImage from "./MainImage";
 
 const toRotate = ["Full-Stack Developer", "AI/ML Engineer"];
 const period = 1000;
@@ -43,10 +41,7 @@ const Banner = () => {
   return (
     <section
       id="home"
-      className="relative min-h-screen bg-cover bg-top bg-no-repeat px-6 sm:px-16 !py-8"
-      style={{
-        backgroundImage: `url(${bgImage.src})`,
-      }}
+      className="relative bg-[#021024] min-h-screen bg-cover bg-top bg-no-repeat px-6 sm:px-16 py-8"
     >
       <div className="max-w-7xl mx-auto !mt-4 md:!mt-24">
         <div className="flex items-center justify-between">
@@ -89,18 +84,19 @@ const Banner = () => {
           </div>
 
           {/* Image Section */}
-          <div className="flex-col md:flex justify-center items-center hidden">
+          <div className="flex-col md:flex justify-center items-center ">
             <motion.div
               initial={{ scale: 0.8, opacity: 0 }}
               whileInView={{ scale: 1, opacity: 1 }}
               transition={{ duration: 0.7 }}
             >
-              <Image
+              {/* <Image
                 src={headerImg}
                 alt="Header"
                 className="max-h-[300px] max-w-[300px] h-[75%] animate-updown bg-gradient-to-r rounded-full"
                 priority
-              />
+              /> */}
+              <MainImage className="animate-updown"/>
             </motion.div>
           </div>
         </div>
