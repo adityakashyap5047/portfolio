@@ -3,6 +3,7 @@
 import { useState, useEffect, useCallback } from "react";
 import { motion } from "framer-motion";
 import MainImage from "./MainImage";
+import { Shapes } from "./Shapes";
 
 const toRotate = ["Full-Stack Developer", "AI/ML Engineer"];
 const period = 1000;
@@ -75,6 +76,7 @@ const Banner = () => {
 
           {/* Image Section */}
           <div className="flex-col md:flex justify-center items-center ">
+            <Shapes />
             <motion.div
               initial={{ scale: 0.8, opacity: 0 }}
               whileInView={{ scale: 1, opacity: 1 }}
