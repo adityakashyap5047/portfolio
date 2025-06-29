@@ -1,7 +1,7 @@
 "use client";
 import React from "react";
 import { useState } from "react";
-import { motion, AnimatePresence } from "framer-motion";
+import { motion, AnimatePresence, easeInOut } from "framer-motion";
 import {
   FaHtml5, FaCss3Alt, FaJs, FaReact, FaNodeJs,
   FaPython, FaDocker, FaGithub,
@@ -53,16 +53,16 @@ export default function Skills() {
     initial: (dir: string) => ({
       opacity: 0,
       y: dir === "down" ? -50 : 50,
-      animate: {
-        opacity: 1,
-        y: 0,
-        transition: { duration: 0.5, ease: "easeInOut" },
-      },
+    }),
+    animate: {
+      opacity: 1,
+      y: 0,
+      transition: { duration: 0.5, ease: easeInOut },
+    },
     exit: (dir: string) => ({
       opacity: 0,
       y: dir === "down" ? 50 : -50,
-      transition: { duration: 0.5, ease: "easeInOut" },
-    }),
+      transition: { duration: 0.5, ease: easeInOut },
     }),
   };
 
