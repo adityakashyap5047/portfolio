@@ -47,7 +47,7 @@ const Banner = () => {
       <div className="max-w-7xl mx-auto mt-4 md:mt-24">
         <div className="flex gap-8 md:flex-row flex-col-reverse">
           {/* Text Section */}
-          <div className="mt-16">
+          <div className="lg:mt-16">
             <motion.div
               initial={{ opacity: 0, y: 40 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -75,15 +75,17 @@ const Banner = () => {
           </div>
 
           {/* Image Section */}
-          <div className="flex-col md:flex justify-center items-center ">
-            <Shapes />
+          <div className="flex-row flex md:flex-col mt-12 gap-12 justify-center items-center ">
             <motion.div
               initial={{ scale: 0.8, opacity: 0 }}
               whileInView={{ scale: 1, opacity: 1 }}
               transition={{ duration: 0.7 }}
             >
-              <MainImage animate="animate-updown" className="w-45 h-45 md:w-70 md:h-70" containerClassName="w-50 h-50 md:w-75 md:h-75"/>
+              <MainImage animate="animate-updown" className="w-30 h-30 sm:w-45 sm:h-45 md:w-70 md:h-70" containerClassName="w-35 h-35 sm:w-50 sm:h-50 md:w-75 md:h-75"/>
             </motion.div>
+            <div className="hidden sm:block mt-8 max-w-60 max-h-60">
+              <Shapes />
+            </div>
           </div>
         </div>
       </div>
