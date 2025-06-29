@@ -78,10 +78,10 @@ const Banner = () => {
 
               <a href="#connect">
                 <button className="relative cursor-pointer !border border-white text-white font-bold text-base sm:text-lg !px-6 !py-3 rounded-lg overflow-hidden group transition-all duration-300">
-                  <span className="relative z-10">Let&apos;s Connect</span>
+                  <span className="relative z-10">My Resume</span>
                   <span className="absolute inset-0 bg-white scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left z-0"></span>
                   <span className="absolute inset-0 text-black group-hover:text-black z-10 text-center w-full h-full flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                    Let&apos;s Connect
+                    My Resume
                   </span>
                 </button>
               </a>

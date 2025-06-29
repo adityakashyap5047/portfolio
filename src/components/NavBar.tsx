@@ -72,7 +72,7 @@ const NavBar = () => {
           ))}
 
           {/* Button */}
-          <a href="#connect" className="my-4 md:my-0 ">
+          <a href="https://linktr.ee/adityakashyap5047" target="_blank" className="my-4 md:my-0 ">
             <button className="cursor-pointer rounded-md w-52 relative hover:text-black border border-white text-white font-bold text-lg px-6 py-3 transition-all duration-300 overflow-hidden group">
               <div className="flex items-center gap-6 relative z-10">
                 <span>Let{`'`}s Connect</span>

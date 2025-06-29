@@ -1,6 +1,8 @@
 "use client";
+import React from "react";
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
+import { easeInOut } from "framer-motion";
 import {
   FaHtml5, FaCss3Alt, FaJs, FaReact, FaNodeJs,
   FaPython, FaDocker, FaGithub,
@@ -8,9 +10,10 @@ import {
 import {
   SiFirebase, SiKubernetes, SiOpenai, SiScikitlearn, SiTensorflow,
 } from "react-icons/si";
-import { section } from "framer-motion/client";
 
-const categories = {
+type CategoryKey = "Web Dev" | "AI/ML" | "DevOps";
+
+const categories: Record<CategoryKey, { name: string; icon: React.ReactElement }[]> = {
   "Web Dev": [
     { name: "HTML", icon: <FaHtml5 className="text-orange-500" /> },
     { name: "CSS", icon: <FaCss3Alt className="text-blue-500" /> },
@@ -32,35 +35,35 @@ const categories = {
   ],
 };
 
-const tabKeys = Object.keys(categories);
+const tabKeys = Object.keys(categories) as CategoryKey[];
 
 export default function Skills() {
-  const [activeTabIndex, setActiveTabIndex] = useState(0);
+  const [activeTabIndex, setActiveTabIndex] = useState<number>(0);
   const [prevTabIndex, setPrevTabIndex] = useState(0);
 
   const activeTab = tabKeys[activeTabIndex];
 
   const direction = activeTabIndex > prevTabIndex ? "down" : "up";
 
-  const handleTabChange = (newIndex) => {
+  const handleTabChange = (newIndex: number) => {
     setPrevTabIndex(activeTabIndex);
     setActiveTabIndex(newIndex);
   };
 
   const variants = {
-    initial: (dir) => ({
+    initial: (dir: string) => ({
       opacity: 0,
       y: dir === "down" ? -50 : 50,
-    }),
-    animate: {
-      opacity: 1,
-      y: 0,
-      transition: { duration: 0.5, ease: "easeInOut" },
-    },
-    exit: (dir) => ({
+      animate: {
+        opacity: 1,
+        y: 0,
+        transition: { duration: 0.5, ease: easeInOut },
+      },
+    exit: (dir: string) => ({
       opacity: 0,
       y: dir === "down" ? 50 : -50,
-      transition: { duration: 0.5, ease: "easeInOut" },
+      transition: { duration: 0.5, ease: easeInOut },
+    }),
     }),
   };
 
