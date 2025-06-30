@@ -142,7 +142,7 @@ export const Contact = () => {
   className="relative cursor-pointer overflow-hidden px-10 py-3 font-bold text-white rounded-md group bg-white/10 backdrop-blur-md border border-white/20 shadow-md transition-all"
 >
   <span className="relative z-10">{buttonText}</span>
-  <span className="absolute left-0 top-0 w-0 h-full bg-[#00e0ff] transition-all duration-300 group-hover:w-full z-0"></span>
+  <span className="absolute left-0 top-0 w-0 h-full bg-[#021024] transition-all duration-300 group-hover:w-full z-0"></span>
 </button>
 
 
