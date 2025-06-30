@@ -20,6 +20,7 @@ export default function TimelineElement() {
         borderRight: "7px solid rgba(2, 16, 36, 0.4)",
       }}
       date="April 2025"
+      dateClassName="text-[#00e0ff] font-bold max-2sl:mt-6 max-2sl:mr-6"
       iconStyle={{
         background: "#00e0ff",
         color: "#fff",
