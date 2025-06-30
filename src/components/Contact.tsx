@@ -91,12 +91,13 @@ export const Contact = () => {
           className="md:w-1/2 w-full"
         >
           <h2 className="text-4xl font-bold !mb-6 text-white">Get In Touch</h2>
-          <form onSubmit={handleSubmit} className="!space-y-4">
+          <form onSubmit={handleSubmit} className="space-y-4">
             <div className="flex flex-col md:flex-row !gap-4">
               <input
                 type="text"
                 value={formDetails.firstName}
                 placeholder="First Name"
+                name="firstName"
                 onChange={(e) => onFormUpdate("firstName", e.target.value)}
                 className="w-full bg-white/10 border border-white/50 text-white !px-6 !py-3 rounded-lg focus:bg-white focus:text-black placeholder-white focus:placeholder-black"
               />
@@ -104,6 +105,7 @@ export const Contact = () => {
                 type="text"
                 value={formDetails.lastName}
                 placeholder="Last Name"
+                name="lastName"
                 onChange={(e) => onFormUpdate("lastName", e.target.value)}
                 className="w-full bg-white/10 border border-white/50 text-white !px-6 !py-3 rounded-lg focus:bg-white focus:text-black placeholder-white focus:placeholder-black"
               />
@@ -113,6 +115,7 @@ export const Contact = () => {
                 type="email"
                 value={formDetails.email}
                 placeholder="Email Address"
+                name="email"
                 onChange={(e) => onFormUpdate("email", e.target.value)}
                 className="w-full bg-white/10 border border-white/50 text-white !px-6 !py-3 rounded-lg focus:bg-white focus:text-black placeholder-white focus:placeholder-black"
               />
@@ -120,6 +123,7 @@ export const Contact = () => {
                 type="tel"
                 value={formDetails.phone}
                 placeholder="Phone No."
+                name="phone"
                 onChange={(e) => onFormUpdate("phone", e.target.value)}
                 className="w-full bg-white/10 border border-white/50 text-white !px-6 !py-3 rounded-lg focus:bg-white focus:text-black placeholder-white focus:placeholder-black"
               />
@@ -128,6 +132,7 @@ export const Contact = () => {
               rows={6}
               value={formDetails.message}
               placeholder="Message"
+              name="message"
               onChange={(e) => onFormUpdate("message", e.target.value)}
               className="w-full bg-white/10 border border-white/50 text-white !px-6 !py-3 rounded-lg focus:bg-white focus:text-black placeholder-white focus:placeholder-black"
             ></textarea>
