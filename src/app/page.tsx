@@ -21,8 +21,3 @@ function App() {
 }
 
 export default App;
-
-export const metadata = {
-  title: 'Aditya Kumar - Portfolio',
-  description: 'Aditya Kumar is a Software Developer with expertise in Web Developement and AI/ML. Visit the portfolio to explore projects, skills, experience, and more.',
-};
