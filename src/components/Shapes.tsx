@@ -89,7 +89,7 @@ function Geometries() {
   return geometries.map(({ position, r, geometry }) => (
     <Geometry
       key={JSON.stringify(position)} // Unique key
-      position={position.map((p) => p * 2)}
+      position={position.map((p) => p * 2) as [number, number, number]}
       geometry={geometry}
       soundEffects={soundEffects}
       materials={materials}
@@ -98,8 +98,16 @@ function Geometries() {
   ));
 }
 
-function Geometry({ r, position, geometry, soundEffects, materials }) {
-  const meshRef = useRef();
+type GeometryProps = {
+  r: number;
+  position: [number, number, number];
+  geometry: THREE.BufferGeometry;
+  soundEffects: HTMLAudioElement[];
+  materials: THREE.Material[];
+};
+
+function Geometry({ r, position, geometry, soundEffects, materials }: GeometryProps) {
+  const meshRef = useRef<THREE.Group>(null);
   const [visible, setVisible] = useState(false);
 
   const startingMaterial = getRandomMaterial();
@@ -108,8 +116,12 @@ function Geometry({ r, position, geometry, soundEffects, materials }) {
     return gsap.utils.random(materials);
   }
 
-  function handleClick(e) {
-    const mesh = e.object;
+  interface ClickEvent {
+    object: THREE.Mesh;
+  }
+
+  function handleClick(e: ClickEvent) {
+    const mesh: THREE.Mesh = e.object;
 
     gsap.utils.random(soundEffects).play();
 
@@ -136,14 +148,16 @@ function Geometry({ r, position, geometry, soundEffects, materials }) {
   useEffect(() => {
     const ctx = gsap.context(() => {
       setVisible(true);
-      gsap.from(meshRef.current.scale, {
-        x: 0,
-        y: 0,
-        z: 0,
-        duration: gsap.utils.random(0.8, 1.2),
-        ease: "elastic.out(1,0.3)",
-        delay: gsap.utils.random(0, 0.5),
-      });
+      if (meshRef.current) {
+        gsap.from(meshRef.current.scale, {
+          x: 0,
+          y: 0,
+          z: 0,
+          duration: gsap.utils.random(0.8, 1.2),
+          ease: "elastic.out(1,0.3)",
+          delay: gsap.utils.random(0, 0.5),
+        });
+      }
     });
     return () => ctx.revert();
   }, []);
