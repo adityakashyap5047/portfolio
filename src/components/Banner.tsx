@@ -42,7 +42,7 @@ const Banner = () => {
   return (
     <section
       id="home"
-      className="relative bg-[#021024]  bg-cover bg-top bg-no-repeat px-6 sm:px-16 py-8"
+      className="relative bg-[#021024] max-md:pb-[144px] md:pb-12 bg-cover bg-top bg-no-repeat px-6 sm:px-16 pt-8"
     >
       <div className="max-w-7xl mx-auto md:mt-24">
         <div className="flex gap-8 md:flex-row flex-col-reverse">
