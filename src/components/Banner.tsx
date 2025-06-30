@@ -4,6 +4,7 @@ import { useState, useEffect, useCallback } from "react";
 import { motion } from "framer-motion";
 import MainImage from "./MainImage";
 import { Shapes } from "./Shapes";
+import Link from "next/link";
 
 const toRotate = ["Full-Stack Developer", "AI/ML Engineer"];
 const period = 1000;
@@ -62,15 +63,20 @@ const Banner = () => {
               <p className="text-gray-300 text-base sm:text-lg md:text-lg leading-relaxed max-xs:my-4 xs:my-8 sl:mt-24 sl:max-w-[75%] sl:mb-11">
                 I specialize in <strong>full-stack web development</strong>, with hands-on experience in technologies such as <strong>HTML5, CSS3, JavaScript, React.js, Next.js, Node.js, Express.js, Django, MySQL,</strong> and <strong>MongoDB</strong>. I am proficient in designing robust RESTful and GraphQL APIs, and adept with modern version control and DevOps tools including <strong>Git, GitHub, GitLab, Vercel, Netlify, Docker</strong>, and <strong>Render</strong>.
               </p>
-              <a href="#connect">
-                <button className="relative cursor-pointer !border border-white text-white font-bold text-base sm:text-lg px-6 py-3 rounded-lg overflow-hidden group transition-all duration-300">
-                  <span className="relative z-10">My Resume</span>
-                  <span className="absolute inset-0 bg-white scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left z-0"></span>
-                  <span className="absolute inset-0 text-black group-hover:text-black z-10 text-center w-full h-full flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                    My Resume
-                  </span>
-                </button>
-              </a>
+              <Link
+  href="#"
+  className="relative inline-block px-8 py-3 text-[#021024] font-bold rounded-md bg-[#0ff] 
+             shadow-[0_0_10px_#0ff,0_0_20px_#0ff] overflow-hidden 
+             transition-all duration-300 transform hover:scale-105 group"
+>
+  <span
+    className="absolute inset-0 w-full h-full bg-gradient-to-r 
+               from-transparent via-white/60 to-transparent animate-shine 
+               group-hover:opacity-100 opacity-0 blur-sm"
+  />
+  <span className="relative z-10">My Resume</span>
+</Link>
+
             </motion.div>
           </div>
 

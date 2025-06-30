@@ -4,6 +4,7 @@ import { useState } from "react";
 import Image from "next/image";
 import { motion } from "framer-motion";
 import contactImg from "@/assets/img/contact-img.svg";
+import { FiX } from "react-icons/fi";
 
 interface FormDetails {
   firstName: string;
@@ -43,7 +44,7 @@ export const Contact = () => {
     setButtonText("Sending...");
 
     try {
-      const response = await fetch("http://localhost:5000/contact", {
+      const response = await fetch("/api/contact", {
         method: "POST",
         headers: {
           "Content-Type": "application/json;charset=utf-8",
@@ -55,10 +56,10 @@ export const Contact = () => {
       setButtonText("Send");
       setFormDetails(formInitialDetails);
 
-      if (result.code === 200) {
-        setStatus({ success: true, message: "Message sent successfully" });
+      if (response.status === 200) {
+        setStatus({ success: true, message: result.message });
       } else {
-        setStatus({ success: false, message: "Something went wrong, please try again later." });
+        setStatus({ success: false, message: result.message });
       }
     } catch {
       setButtonText("Send");
@@ -134,21 +135,33 @@ export const Contact = () => {
               placeholder="Message"
               name="message"
               onChange={(e) => onFormUpdate("message", e.target.value)}
-              className="w-full bg-white/10 border border-white/50 text-white !px-6 !py-3 rounded-lg focus:bg-white focus:text-black placeholder-white focus:placeholder-black"
+              className="w-full bg-white/10 border border-white/50 text-white px-6 py-3 rounded-lg focus:bg-white focus:text-black placeholder-white focus:placeholder-black"
             ></textarea>
             <button
-              type="submit"
-              className="relative cursor-pointer overflow-hidden !px-10 !py-3 !bg-white !text-black font-bold hover:!text-white transition-all rounded-md group"
-            >
-              <span className="relative z-10">{buttonText}</span>
-              <span className="absolute left-0 top-0 w-0 h-full bg-black transition-all duration-300 group-hover:w-full z-0"></span>
-            </button>
+  type="submit"
+  className="relative cursor-pointer overflow-hidden px-10 py-3 font-bold text-white rounded-md group bg-white/10 backdrop-blur-md border border-white/20 shadow-md transition-all"
+>
+  <span className="relative z-10">{buttonText}</span>
+  <span className="absolute left-0 top-0 w-0 h-full bg-[#00e0ff] transition-all duration-300 group-hover:w-full z-0"></span>
+</button>
+
 
             {status.message && (
-              <p className={`!mt-4 ${status.success ? "text-green-400" : "text-red-400"}`}>
-                {status.message}
-              </p>
-            )}
+  <div
+    className={`mt-4 p-4 flex flex-row-reverse justify-between rounded-md text-center backdrop-blur-md bg-white/10 border border-white/20 shadow-md ${
+      status.success ? "text-green-400" : "text-red-400"
+    }`}
+  >
+    <button
+      onClick={() => setStatus({ message: "", success: false })}
+      className="cursor-pointer top-2 right-3 text-white hover:text-red-400 text-lg font-bold"
+    >
+      <FiX />
+    </button>
+    {status.message}
+  </div>
+)}
+
           </form>
         </motion.div>
       </div>
