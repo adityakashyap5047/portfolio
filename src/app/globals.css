@@ -2,6 +2,7 @@
 
 @theme{
   --breakpoint-1xs: 22rem;
+  --breakpoint-ss: 23rem;
   --breakpoint-xs: 27rem;
   --breakpoint-xm: 52rem;
   --breakpoint-sl: 69rem;

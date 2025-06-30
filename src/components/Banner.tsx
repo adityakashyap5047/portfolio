@@ -53,7 +53,7 @@ const Banner = () => {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6 }}
             >
-              <h1 className="md:mt-16 max-1xs:mt-0 text-3xl sm:text-4xl xm:text-5xl lg:text-6xl font-bold text-white leading-tight ">
+              <h1 className="md:mt-16 max-1xs:mt-0 ss:my-6 xs:my-0 text-3xl sm:text-4xl xm:text-5xl lg:text-6xl font-bold text-white leading-tight ">
                 Hi! I am Aditya Kumar,{" "}<br />
                 <span className="border-r-2 border-gray-400 pr-2 text-2xl sm:text-3xl xm:text-4xl lg:text-5xl ">
                   {text}
