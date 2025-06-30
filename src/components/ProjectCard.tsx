@@ -34,15 +34,17 @@ const ProjectCard = ({
 
       {/* Content */}
       <div
-        className="absolute inset-0 flex flex-col items-center justify-center text-center 
+        className="absolute inset-0 flex flex-col items-center justify-evenly text-center 
         opacity-0 group-hover:opacity-100 transition-opacity duration-700 ease-in-out delay-100 px-6"
       >
-        <h4 className="text-white text-2xl font-bold mb-2 drop-shadow-md">{title}</h4>
-        <p className="text-white/90 italic text-sm mb-4 max-w-sm">{description}</p>
+        <div>
+          <h4 className="text-[#021024] text-2xl font-bold mb-2 drop-shadow-md">{title}</h4>
+        <p className="text-[#021024]/90 italic text-sm mb-4 max-w-sm">{description}</p>
+        </div>
         <Link href={projectLink} target="_blank">
           <button
-            className="mt-2 px-5 py-2 cursor-pointer text-white font-semibold rounded-md border border-white/30 
-            bg-white/10 backdrop-blur-sm hover:bg-white/20 transition-all duration-300"
+            className="mt-2 px-5 py-2 cursor-pointer text-[#021024] font-semibold rounded-md border border-white/30 
+            bg-white/10 backdrop-blur-sm hover:bg-[#00e0ff]/40 transition-all duration-300"
           >
             View Project
           </button>

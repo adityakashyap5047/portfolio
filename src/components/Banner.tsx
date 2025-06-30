@@ -64,18 +64,18 @@ const Banner = () => {
                 I specialize in <strong>full-stack web development</strong>, with hands-on experience in technologies such as <strong>HTML5, CSS3, JavaScript, React.js, Next.js, Node.js, Express.js, Django, MySQL,</strong> and <strong>MongoDB</strong>. I am proficient in designing robust RESTful and GraphQL APIs, and adept with modern version control and DevOps tools including <strong>Git, GitHub, GitLab, Vercel, Netlify, Docker</strong>, and <strong>Render</strong>.
               </p>
               <Link
-  href="#"
-  className="relative inline-block px-8 py-3 text-[#021024] font-bold rounded-md bg-[#0ff] 
-             shadow-[0_0_10px_#0ff,0_0_20px_#0ff] overflow-hidden 
-             transition-all duration-300 transform hover:scale-105 group"
->
-  <span
-    className="absolute inset-0 w-full h-full bg-gradient-to-r 
-               from-transparent via-white/60 to-transparent animate-shine 
-               group-hover:opacity-100 opacity-0 blur-sm"
-  />
-  <span className="relative z-10">My Resume</span>
-</Link>
+                href="#"
+                className="relative inline-block px-8 py-3 text-[#021024] font-bold rounded-md bg-[#0ff] 
+                          shadow-[0_0_10px_#0ff,0_0_20px_#0ff] overflow-hidden 
+                          transition-all duration-300 transform hover:scale-105 group"
+              >
+                <span
+                  className="absolute inset-0 w-full h-full bg-gradient-to-r 
+                            from-transparent via-white/60 to-transparent animate-shine 
+                            group-hover:opacity-100 opacity-0 blur-sm"
+                />
+                <span className="relative z-10">My Resume</span>
+              </Link>
 
             </motion.div>
           </div>
