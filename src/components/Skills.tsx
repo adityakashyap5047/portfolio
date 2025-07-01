@@ -5,23 +5,22 @@ import { motion, AnimatePresence, easeInOut } from "framer-motion";
 import {
   FaHtml5, FaCss3Alt, FaJs, FaReact, FaNodeJs,
   FaPython, FaDocker, FaGithub,
+  FaServer,
 } from "react-icons/fa";
 import {
-  SiFirebase, SiKubernetes, SiOpenai, SiScikitlearn, SiTensorflow,
+  SiJsonwebtokens, SiKubernetes, SiOpenai, SiScikitlearn, SiTensorflow,
 } from "react-icons/si";
 
 type CategoryKey = "Web Dev" | "AI / ML" | "Mobile" | "Backend" | "Database" | "DevOps / Tools" | "Cloud";
 import {
-  FaGitAlt, FaLinux, FaAws
+  FaGitAlt, FaLinux, 
 } from "react-icons/fa";
 import {
   SiMongodb, SiMysql, SiTailwindcss, SiExpress, SiNextdotjs,
   SiRedux, SiTypescript,
-  SiFlutter, SiPrisma, SiJupyter, SiVite, SiPostman,
-  SiAppwrite, SiGraphql, SiNodedotjs
+  SiFlutter, SiPrisma, SiJupyter, SiPostman,
+  SiGraphql, 
 } from "react-icons/si";
-import { DiDjango } from "react-icons/di";
-import { AiOutlineAntDesign } from "react-icons/ai";
 
 const categories: Record<string, { name: string; icon: React.ReactElement }[]> = {
   "Web Dev": [
@@ -29,19 +28,19 @@ const categories: Record<string, { name: string; icon: React.ReactElement }[]> =
     { name: "CSS", icon: <FaCss3Alt className="text-blue-400" /> },
     { name: "JavaScript", icon: <FaJs className="text-yellow-400" /> },
     { name: "TypeScript", icon: <SiTypescript className="text-blue-500" /> },
-    { name: "React.js", icon: <FaReact className="text-cyan-400" /> },
-    { name: "Next.js", icon: <SiNextdotjs className="text-white" /> },
     { name: "Tailwind CSS", icon: <SiTailwindcss className="text-cyan-300" /> },
-    { name: "Redux", icon: <SiRedux className="text-purple-500" /> },
-    { name: "Vite", icon: <SiVite className="text-purple-300" /> },
-    { name: "Ant Design", icon: <AiOutlineAntDesign className="text-blue-400" /> },
+    { name: "React.js", icon: <FaReact className="text-cyan-400" /> },
     { name: "Node.js", icon: <FaNodeJs className="text-green-500" /> },
     { name: "Express.js", icon: <SiExpress className="text-gray-300" /> },
+    { name: "REST APIs", icon: <FaServer className="text-gray-400" /> },
+    { name: "MySQL", icon: <SiMysql className="text-blue-500" /> },
+    { name: "MongoDB", icon: <SiMongodb className="text-green-400" /> },
+    { name: "Prisma ORM", icon: <SiPrisma className="text-indigo-300" /> },
+    { name: "JWT (Auth)", icon: <SiJsonwebtokens className="text-orange-300" /> },
+    { name: "Redux", icon: <SiRedux className="text-purple-500" /> },
+    { name: "Next.js", icon: <SiNextdotjs className="text-white" /> },
     { name: "GraphQL", icon: <SiGraphql className="text-pink-500" /> },
-    { name: "Prisma", icon: <SiPrisma className="text-indigo-300" /> },
-    { name: "Appwrite", icon: <SiAppwrite className="text-pink-400" /> },
   ],
-
   "AI / ML": [
     { name: "Python", icon: <FaPython className="text-yellow-400" /> },
     { name: "Jupyter Notebook", icon: <SiJupyter className="text-orange-400" /> },
@@ -55,30 +54,13 @@ const categories: Record<string, { name: string; icon: React.ReactElement }[]> =
     { name: "Flutter", icon: <SiFlutter className="text-blue-300" /> },
   ],
 
-  "Backend": [
-    { name: "Node.js", icon: <SiNodedotjs className="text-green-500" /> },
-    { name: "Express.js", icon: <SiExpress className="text-gray-300" /> },
-    { name: "Django", icon: <DiDjango className="text-green-700" /> },
-  ],
-
-  "Database": [
-    { name: "MongoDB", icon: <SiMongodb className="text-green-400" /> },
-    { name: "MySQL", icon: <SiMysql className="text-blue-500" /> },
-    { name: "Firebase", icon: <SiFirebase className="text-yellow-400" /> },
-  ],
-
-  "DevOps / Tools": [
+  "DevOps": [
     { name: "GitHub", icon: <FaGithub className="text-white" /> },
     { name: "Git", icon: <FaGitAlt className="text-orange-400" /> },
     { name: "Docker", icon: <FaDocker className="text-blue-300" /> },
     { name: "Kubernetes", icon: <SiKubernetes className="text-blue-400" /> },
     { name: "Postman", icon: <SiPostman className="text-orange-500" /> },
     { name: "Linux", icon: <FaLinux className="text-yellow-300" /> },
-  ],
-
-  "Cloud": [
-    { name: "Firebase", icon: <SiFirebase className="text-yellow-400" /> },
-    { name: "AWS", icon: <FaAws className="text-yellow-300" /> },
   ],
 };
 

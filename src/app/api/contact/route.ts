@@ -59,7 +59,7 @@ export async function POST(request: NextRequest) {
         <ul>
           <li><strong>Name:</strong> ${firstName} ${lastName}</li>
           <li><strong>Email:</strong> <a href="mailto:${email}">${email}</a></li>
-          <li><strong>Category:</strong> ${phone}</li>
+          <li><strong>Phone No.:</strong> ${phone}</li>
           <li><strong>Message:</strong><br/>${message}</li>
         </ul>
 
