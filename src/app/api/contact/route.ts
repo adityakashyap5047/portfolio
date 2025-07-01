@@ -30,7 +30,7 @@ export async function POST(request: NextRequest) {
     });
 
     // Email content
-    const mailOptions = {
+    const ownerMailOptions = {
       from: process.env.EMAIL_USER,
       to: process.env.EMAIL_USER,
       subject: `New message from ${firstName} ${lastName} via portfolio form`,
@@ -70,9 +70,44 @@ export async function POST(request: NextRequest) {
         <p><em>Portfolio Website Bot</em></p>
       `,
     };
-    
+
+    const userReplyOptions = {
+      from: process.env.EMAIL_USER,
+      to: email,
+      subject: `Thank you for contacting Aditya Kumar`,
+      text: `
+        Hi ${firstName},
+
+        Thank you for reaching out through my portfolio website!
+
+        I've received your message and will get back to you as soon as possible.
+
+        Here's what you submitted:
+        - Message: ${message}
+        - Phone No.: ${phone}
+
+        Best regards,  
+        Aditya Kumar  
+        https://adityakashyap5047.vercel.app
+      `,
+      html: `
+        <p>Hi ${firstName},</p>
+        <p>Thank you for reaching out through my <strong>portfolio website</strong>!</p>
+        <p>I've received your message and will get back to you as soon as possible.</p>
+        <h4>Your Submission:</h4>
+        <ul>
+        <li><strong>Message:</strong> ${message}</li>
+        <li><strong>Phone No.:</strong> ${phone}</li>
+        </ul>
+        <p>Best regards,<br/><strong>Aditya Kumar</strong><br/>
+        <a href="https://adityakashyap5047.vercel.app">adityakashyap5047.vercel.app</a></p>
+      `,
+    };
+
+
     // Send the email
-    await transporter.sendMail(mailOptions);
+    await transporter.sendMail(ownerMailOptions);
+    await transporter.sendMail(userReplyOptions);
 
     return Response.json({message: "Message sent successfully!!!"}, {status: 200})
   } catch (error) {
