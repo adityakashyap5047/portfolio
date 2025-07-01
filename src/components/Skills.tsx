@@ -10,15 +10,21 @@ import {
 } from "react-icons/fa";
 import {
   SiAmazon,
+  SiAppstore,
   SiChromatic,
   SiDatabricks,
   SiDocker,
+  SiExpo,
+  SiFirebase,
+  SiFlutter,
   SiGithubactions,
   SiGitlab,
+  SiGoogleplay,
   SiGrafana,
   SiHuggingface,
   SiJenkins,
-  SiJsonwebtokens, SiKeras, SiKubernetes, SiLangchain, SiNumpy, SiOpenai, SiOpencv, SiPandas, SiPlotly, SiPytorch, SiScikitlearn, SiTensorflow,
+  SiJsonwebtokens, SiKeras, SiKotlin, SiKubernetes, SiLangchain, SiNumpy, SiOpenai, SiOpencv, SiPandas, SiPlotly, SiPytorch, SiReact, SiScikitlearn, SiTensorflow,
+  SiZod,
 } from "react-icons/si";
 import { Ollama } from "@lobehub/icons";
 
@@ -61,15 +67,12 @@ const categories: Record<string, { name: string; icon: React.ReactElement }[]> =
     { name: "Scikit-Learn", icon: <SiScikitlearn className="text-blue-500" /> },
     { name: "TensorFlow", icon: <SiTensorflow className="text-orange-400" /> },
     { name: "Keras", icon: <SiKeras className="text-red-500" /> },
-    { name: "PyTorch", icon: <SiPytorch className="text-orange-500" /> },
-    { name: "OpenCV", icon: <SiOpencv className="text-blue-400" /> },
     { name: "Transformers", icon: <SiHuggingface className="text-yellow-300" /> },
     { name: "LangChain", icon: <SiLangchain className="text-purple-400" /> },
     { name: "OpenAI", icon: <SiOpenai className="text-green-400" /> },
     { name: "Hugging Face", icon: <SiHuggingface className="text-yellow-400" /> },
     { name: "Ollama", icon: <Ollama className="text-cyan-400" /> },
     { name: "Vector Embeddings", icon: <SiDatabricks className="text-sky-400" /> },
-    { name: "ChromaDB", icon: <SiChromatic className="text-pink-400" /> },
     { name: "RAG", icon: <SiDatabricks className="text-violet-400" /> },
     { name: "Fine-tuning", icon: <FaWrench className="text-blue-400" /> },
   ],
@@ -88,7 +91,15 @@ const categories: Record<string, { name: string; icon: React.ReactElement }[]> =
   ],
 
   "App Dev": [
-    
+    { name: "React Native", icon: <SiReact className="text-cyan-400" /> },
+    { name: "Flutter", icon: <SiFlutter className="text-sky-400" /> },
+    { name: "Kotlin", icon: <SiKotlin className="text-purple-400" /> },
+    { name: "Expo", icon: <SiExpo className="text-black dark:text-white" /> },
+    { name: "Redux Toolkit", icon: <SiRedux className="text-purple-500" /> },
+    { name: "Zod", icon: <SiZod className="text-yellow-400" /> },
+    { name: "Firebase", icon: <SiFirebase className="text-yellow-500" /> },
+    { name: "Play Console", icon: <SiGoogleplay className="text-green-500" /> },
+    { name: "App Store Connect", icon: <SiAppstore className="text-blue-400" /> },
   ]
 };
 
