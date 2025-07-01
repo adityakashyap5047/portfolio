@@ -4,14 +4,20 @@ import { useState } from "react";
 import { motion, AnimatePresence, easeInOut } from "framer-motion";
 import {
   FaHtml5, FaCss3Alt, FaJs, FaReact, FaNodeJs,
-  FaPython, FaDocker, FaGithub,
+  FaPython, FaGithub,
   FaServer,
   FaWrench,
 } from "react-icons/fa";
 import {
+  SiAmazon,
   SiChromatic,
   SiDatabricks,
+  SiDocker,
+  SiGithubactions,
+  SiGitlab,
+  SiGrafana,
   SiHuggingface,
+  SiJenkins,
   SiJsonwebtokens, SiKeras, SiKubernetes, SiLangchain, SiNumpy, SiOpenai, SiOpencv, SiPandas, SiPlotly, SiPytorch, SiScikitlearn, SiTensorflow,
 } from "react-icons/si";
 import { Ollama } from "@lobehub/icons";
@@ -23,7 +29,7 @@ import {
 import {
   SiMongodb, SiMysql, SiTailwindcss, SiExpress, SiNextdotjs,
   SiRedux, SiTypescript,
-  SiFlutter, SiPrisma, SiPostman,
+  SiPrisma,
   SiGraphql, 
 } from "react-icons/si";
 
@@ -68,19 +74,22 @@ const categories: Record<string, { name: string; icon: React.ReactElement }[]> =
     { name: "Fine-tuning", icon: <FaWrench className="text-blue-400" /> },
   ],
 
-  "Mobile": [
-    { name: "React Native", icon: <FaReact className="text-cyan-400" /> },
-    { name: "Flutter", icon: <SiFlutter className="text-blue-300" /> },
+  "DevOps": [
+    { name: "Git", icon: <FaGitAlt className="text-orange-400" /> },
+    { name: "GitHub", icon: <FaGithub className="text-white" /> },
+    { name: "GitLab", icon: <SiGitlab className="text-orange-400" /> },
+    { name: "Linux", icon: <FaLinux className="text-yellow-300" /> },
+    { name: "Docker", icon: <SiDocker className="text-blue-500" /> },
+    { name: "GitHub Actions", icon: <SiGithubactions className="text-white" /> },
+    { name: "Jenkins", icon: <SiJenkins className="text-red-500" /> },
+    { name: "AWS", icon: <SiAmazon className="text-yellow-400" /> },
+    { name: "Grafana", icon: <SiGrafana className="text-yellow-500" /> },
+    { name: "Kubernetes", icon: <SiKubernetes className="text-blue-400" /> },
   ],
 
-  "DevOps": [
-    { name: "GitHub", icon: <FaGithub className="text-white" /> },
-    { name: "Git", icon: <FaGitAlt className="text-orange-400" /> },
-    { name: "Docker", icon: <FaDocker className="text-blue-300" /> },
-    { name: "Kubernetes", icon: <SiKubernetes className="text-blue-400" /> },
-    { name: "Postman", icon: <SiPostman className="text-orange-500" /> },
-    { name: "Linux", icon: <FaLinux className="text-yellow-300" /> },
-  ],
+  "App Dev": [
+    
+  ]
 };
 
 const tabKeys = Object.keys(categories) as CategoryKey[];
