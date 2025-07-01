@@ -23,6 +23,8 @@ const ProjectCard = ({
       <Image
         src={imgUrl}
         alt={title}
+        width={500}
+        height={500}
         className="w-full h-auto object-cover transition-transform duration-700 ease-in-out group-hover:scale-105"
       />
 

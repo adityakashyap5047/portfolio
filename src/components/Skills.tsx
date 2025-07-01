@@ -11,7 +11,6 @@ import {
 import {
   SiAmazon,
   SiAppstore,
-  SiChromatic,
   SiDatabricks,
   SiDocker,
   SiExpo,
@@ -23,7 +22,7 @@ import {
   SiGrafana,
   SiHuggingface,
   SiJenkins,
-  SiJsonwebtokens, SiKeras, SiKotlin, SiKubernetes, SiLangchain, SiNumpy, SiOpenai, SiOpencv, SiPandas, SiPlotly, SiPytorch, SiReact, SiScikitlearn, SiTensorflow,
+  SiJsonwebtokens, SiKeras, SiKotlin, SiKubernetes, SiLangchain, SiNumpy, SiOpenai, SiPandas, SiPlotly, SiReact, SiScikitlearn, SiTensorflow,
   SiZod,
 } from "react-icons/si";
 import { Ollama } from "@lobehub/icons";

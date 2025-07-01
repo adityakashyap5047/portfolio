@@ -1,7 +1,6 @@
 "use client";
 
 import { useState } from "react";
-import projImg1 from "@/assets/img/project-img1.png";
 import projImg2 from "@/assets/img/project-img2.png";
 import projImg3 from "@/assets/img/project-img3.png";
 import ProjectCard from "./ProjectCard";
@@ -17,7 +16,7 @@ const projects = [
     title: "Business Startup",
     type: "Web Development",
     description: "Design & Development",
-    imgUrl: projImg1,
+    imgUrl: "/projImg/HeapFlow.png",
   },
   {
     title: "Business Startup",
@@ -35,7 +34,7 @@ const projects = [
     title: "Business Startup",
     type: "AI/ML",
     description: "Design & Development",
-    imgUrl: projImg1,
+    imgUrl: "/projImg/HeapFlow.png",
   },
   {
     title: "Business Startup",
