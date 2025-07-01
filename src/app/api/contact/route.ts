@@ -33,36 +33,44 @@ export async function POST(request: NextRequest) {
     const mailOptions = {
       from: process.env.EMAIL_USER,
       to: process.env.EMAIL_USER,
-      subject: "",
+      subject: `New message from ${firstName} ${lastName} via portfolio form`,
       text: `
-        Dear Support Team,
+        Hi Aditya,
 
-        I hope this message finds you well. My name is ${firstName} ${lastName}, and I am reaching out to you regarding the following:
-        Category:- ${phone} ${phone === "others" ? `- ${message}` : ""}
-    
-        Please feel free to reach out to me if further information is required. I look forward to your response at your earliest convenience.
-    
-        Best regards,
-        ${firstName} ${lastName}
-        ${email}
-      `,
+        You've received a new message through your portfolio website.
+
+        Name: ${firstName} ${lastName}
+        Email: ${email}
+        Phone No.: ${phone}
+        Message: ${message}
+
+        Feel free to follow up with them directly.
+
+        Regards,  
+        Portfolio Website Bot
+        `,
+
       html: `
-        <p>Dear Support Team,</p>
+        <p>Hi Aditya,</p>
 
-        <p>I hope this message finds you well. My name is <strong>${firstName} ${lastName}</strong>, and I am reaching out to you regarding the following:</p>
-        <p><strong>Category:-</strong> ${phone} ${phone === "others" ? "- "+message  : ""}</p>
-    
-        <p>Please feel free to reach out to me if further information is required. I look forward to your response at your earliest convenience.</p>
-    
+        <p>You’ve received a new message through your <strong>portfolio website contact form</strong>.</p>
+
+        <h4>Contact Details:</h4>
+        <ul>
+          <li><strong>Name:</strong> ${firstName} ${lastName}</li>
+          <li><strong>Email:</strong> <a href="mailto:${email}">${email}</a></li>
+          <li><strong>Category:</strong> ${phone}</li>
+          <li><strong>Message:</strong><br/>${message}</li>
+        </ul>
+
+        <p>You can reply directly to their email if needed.</p>
+
         <br/>
-    
-        <p>Best regards,</p>
-        <p><strong>${firstName} ${lastName}</strong></p>
-        <p>${email}</p>
+        <p>Regards,</p>
+        <p><em>Portfolio Website Bot</em></p>
       `,
     };
     
-
     // Send the email
     await transporter.sendMail(mailOptions);
 
