@@ -6,10 +6,15 @@ import {
   FaHtml5, FaCss3Alt, FaJs, FaReact, FaNodeJs,
   FaPython, FaDocker, FaGithub,
   FaServer,
+  FaWrench,
 } from "react-icons/fa";
 import {
-  SiJsonwebtokens, SiKubernetes, SiOpenai, SiScikitlearn, SiTensorflow,
+  SiChromatic,
+  SiDatabricks,
+  SiHuggingface,
+  SiJsonwebtokens, SiKeras, SiKubernetes, SiLangchain, SiNumpy, SiOpenai, SiOpencv, SiPandas, SiPlotly, SiPytorch, SiScikitlearn, SiTensorflow,
 } from "react-icons/si";
+import { Ollama } from "@lobehub/icons";
 
 type CategoryKey = "Web Dev" | "AI / ML" | "Mobile" | "Backend" | "Database" | "DevOps / Tools" | "Cloud";
 import {
@@ -18,7 +23,7 @@ import {
 import {
   SiMongodb, SiMysql, SiTailwindcss, SiExpress, SiNextdotjs,
   SiRedux, SiTypescript,
-  SiFlutter, SiPrisma, SiJupyter, SiPostman,
+  SiFlutter, SiPrisma, SiPostman,
   SiGraphql, 
 } from "react-icons/si";
 
@@ -42,11 +47,25 @@ const categories: Record<string, { name: string; icon: React.ReactElement }[]> =
     { name: "GraphQL", icon: <SiGraphql className="text-pink-500" /> },
   ],
   "AI / ML": [
-    { name: "Python", icon: <FaPython className="text-yellow-400" /> },
-    { name: "Jupyter Notebook", icon: <SiJupyter className="text-orange-400" /> },
+    { name: "Python", icon: <FaPython className="text-yellow-300" /> },
+    { name: "NumPy", icon: <SiNumpy className="text-purple-400" /> },
+    { name: "Pandas", icon: <SiPandas className="text-black dark:text-white" /> },
+    { name: "Matplotlib", icon: <SiPlotly className="text-pink-400" /> },
+    { name: "Seaborn", icon: <span className="text-blue-400 text-2xl font-bold">S</span> },
+    { name: "Scikit-Learn", icon: <SiScikitlearn className="text-blue-500" /> },
     { name: "TensorFlow", icon: <SiTensorflow className="text-orange-400" /> },
-    { name: "Scikit-learn", icon: <SiScikitlearn className="text-yellow-300" /> },
-    { name: "OpenAI API", icon: <SiOpenai className="text-white" /> },
+    { name: "Keras", icon: <SiKeras className="text-red-500" /> },
+    { name: "PyTorch", icon: <SiPytorch className="text-orange-500" /> },
+    { name: "OpenCV", icon: <SiOpencv className="text-blue-400" /> },
+    { name: "Transformers", icon: <SiHuggingface className="text-yellow-300" /> },
+    { name: "LangChain", icon: <SiLangchain className="text-purple-400" /> },
+    { name: "OpenAI", icon: <SiOpenai className="text-green-400" /> },
+    { name: "Hugging Face", icon: <SiHuggingface className="text-yellow-400" /> },
+    { name: "Ollama", icon: <Ollama className="text-cyan-400" /> },
+    { name: "Vector Embeddings", icon: <SiDatabricks className="text-sky-400" /> },
+    { name: "ChromaDB", icon: <SiChromatic className="text-pink-400" /> },
+    { name: "RAG", icon: <SiDatabricks className="text-violet-400" /> },
+    { name: "Fine-tuning", icon: <FaWrench className="text-blue-400" /> },
   ],
 
   "Mobile": [
