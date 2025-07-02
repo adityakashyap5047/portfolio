@@ -11,22 +11,32 @@ const tabs = [
 
 const projects = [
   {
-    title: "Business Startup",
-    type: "Web Development",
-    description: "Design & Development",
+    title: "HeapFlow",
+    type: "WebDev",
+    description: "HeapFlow is the ultimate platform for sharing and upvoting anonymous thoughts, confessions, and ideas.",
     imgUrl: "/projImg/HeapFlow.png",
+    projectLink: "https://heapflow.vercel.app",
   },
   {
-    title: "Business Startup",
-    type: "Web Development",
-    description: "Design & Development",
+    title: "PiTalk",
+    type: "WebDev",
+    description: "PiTalk is a dynamic community-driven platform designed for open discussions, knowledge sharing and real-time collaboration.",
     imgUrl: "/projImg/PiTalk.png",
+    projectLink: "https://pitalk.vercel.app",
   },
   {
-    title: "Business Startup",
-    type: "Web Development",
-    description: "Design & Development",
+    title: "QuickQuips",
+    type: "WebDev",
+    description: "QuickQuips helps to dive into the world of Anonymous Conversations.",
     imgUrl: "/projImg/QuickQuips.png",
+    projectLink: "https://quickquips.vercel.app",
+  },
+  {
+    title: "ReelPro",
+    type: "WebDev",
+    description: "ReelPro is a platform for sharing and discovering short, engaging video content.",
+    imgUrl: "/projImg/ReelPro.png",
+    projectLink: "https://reelpro.vercel.app",
   },
   {
     title: "Business Startup",
@@ -66,7 +76,7 @@ const Projects = () => {
         </p>
 
         {/* Tab Buttons */}
-        <div className="relative w-[72%] !mx-auto !mb-12 border border-white/50 rounded-full bg-white/10 flex overflow-hidden">
+        <div className="relative w-[72%] mx-auto mb-12 border border-white/50 rounded-full bg-white/10 flex overflow-hidden">
           {tabs.map(({ key, label }, idx) => {
             const isActive = activeTab === key;
             const radiusClass =
@@ -80,7 +90,7 @@ const Projects = () => {
               <button
                 key={key}
                 onClick={() => setActiveTab(key)}
-                className={`w-1/3 !py-3 text-sm font-medium cursor-pointer transition-all duration-300 z-10 !border-r !border-white/50 last:border-r-0 ${radiusClass} ${
+                className={`w-1/3 py-3 text-sm font-medium cursor-pointer transition-all duration-300 z-10 border-r border-white/50 last:border-r-0 ${radiusClass} ${
                   isActive
                     ? "bg-gradient-to-r from-[#114c54] to-[#170277] text-white"
                     : "bg-transparent text-white/80 hover:text-white"
@@ -95,7 +105,7 @@ const Projects = () => {
         {/* Tab Content */}
         {activeTab === "first" && (
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
-            {projects.filter((project) => project.type === "Web Development").map((project, index) => (
+            {projects.filter((project) => project.type === "WebDev").map((project, index) => (
               <ProjectCard key={index} {...project} />
             ))}
           </div>

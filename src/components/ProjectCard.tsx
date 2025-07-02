@@ -40,7 +40,7 @@ const ProjectCard = ({
       >
         <div>
           <h4 className="text-[#021024] text-2xl font-bold mb-2 drop-shadow-md">{title}</h4>
-          <p className="text-[#021024]/90 italic text-sm mb-4 max-w-sm">{description}</p>
+          <p className="text-[#021024]/90 italic font-semibold text-sm mb-4 max-w-sm">{description}</p>
         </div>
         <Link href={projectLink} target="_blank">
           <button
