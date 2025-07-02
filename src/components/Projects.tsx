@@ -6,7 +6,7 @@ import ProjectCard from "./ProjectCard";
 const tabs = [
   { key: "first", label: "Web Dev" },
   { key: "second", label: "AI/ML" },
-  { key: "third", label: "DevOps" },
+  { key: "third", label: "Python" },
 ];
 
 const projects = [
@@ -53,10 +53,11 @@ const projects = [
     projectLink: "https://mathscope.onrender.com"
   },
   {
-    title: "Business Startup",
-    type: "DevOps",
-    description: "Design & Development",
-    imgUrl: "/projImg/PiTalk.png",
+    title: "TextMate",
+    type: "Python",
+    description: "TextMate can be used to clean up, format, or analyse the text.",
+    imgUrl: "/projImg/TextMate.png",
+    projectLink: "https://textmate-618z.onrender.com"
   },
 ];
 
@@ -123,7 +124,7 @@ const Projects = () => {
 
         {activeTab === "third" && (
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
-            {projects.filter((project) => project.type === "DevOps").map((project, index) => (
+            {projects.filter((project) => project.type === "Python").map((project, index) => (
               <ProjectCard key={index} {...project} />
             ))}
           </div>
