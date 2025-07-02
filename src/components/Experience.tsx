@@ -4,30 +4,77 @@ import { VerticalTimeline }  from 'react-vertical-timeline-component';
 import 'react-vertical-timeline-component/style.min.css';
 import TimelineElement from './TimelineElement';
 
-const data = [
+const experiences = [
+  {
+    position: "Software Engineer",
+    company: "K3's Helping Hand",
+    role: "Part-time",
+    type: "Remote",
+    Description: `
+      In this role, my position is Software Engineer where I am responsible for developing and maintaining web-based applications focused on social impact and community support. 
+
+      I collaborate with a distributed team to implement both frontend and backend features using modern web technologies. 
+
+      My work involves writing clean, scalable code, participating in Agile ceremonies, conducting peer reviews, and contributing to architectural decisions. 
+
+      I also optimize application performance and ensure smooth deployment pipelines using CI/CD workflows.
+    `,
+    duration: "May 2025 - Present",
+    country: "India",
+  },
+  {
+    position: "Freelance Developer",
+    company: "Self-employed",
+    role: "Freelance",
+    type: "Remote",
+    Description: `
+      As a Freelancer, I also working with international clients to deliver customized full-stack solutions remotely.
+
+      I design and develop responsive web applications using the MERN stack including Next.js, ensuring scalability and performance.
+
+      I translate client requirements into technical specifications, integrate APIs, and provide continuous debugging and support.
+
+      I manage project timelines independently, communicate across time zones, and ensure client satisfaction through efficient delivery and problem-solving.
+    `,
+    duration: "Jul 2024 - May 2025",
+    country: "United States",
+  },
+  {
+    position: "Back End Developer",
+    company: "DigitalBuzz Software Pvt Ltd",
+    role: "Internship",
+    type: "Remote",
+    Description: `
+      In this role, my position was Back End Developer Intern where I focused on building scalable and secure backend systems using Node.js, Express.js and MongoDB.
+
+      I developed and maintained RESTful APIs, optimized database queries, and collaborated closely with frontend teams to ensure seamless integration.
+
+      I gained hands-on experience in using tools like Postman, Hoppscotch, and Git for testing and version control.
+
+      Additionally, I contributed to CI/CD processes, participated in sprint planning, and followed Agile development practices throughout the internship.
+    `,
+    duration: "Apr 2024 - Oct 2024",
+    country: "India",
+  },
   {
     position: "Online Tutor",
     company: "My Engineering Buddy",
     role: "Freelance",
     type: "Remote",
-    Description:
-        `
-          Tutoring engineering students in subjects like Data Structures, Algorithms, Web Development, Database Management, and Computer Science Fundamentals.
-
-          Delivering personalized 1-on-1 online sessions, simplifying complex concepts, and helping students achieve academic success.
-
-          Designing practice problems and walkthroughs tailored to individual learning styles and syllabi.
-
-          Assisting students with project guidance, debugging, and exam preparation, fostering strong conceptual foundations.
-
-          Leveraging tools like Google Meet, Zoom, shared coding platforms, and digital whiteboards for real-time interactive teaching.
-
-          Maintaining excellent student satisfaction ratings through engaging teaching and timely support.
-        `,
-    duration: "Jan 2023 - Present",
+    Description: `
+      In this role, my position was Online Tutor where I provided academic support to engineering students in subjects such as Data Structures, Algorithms, Web Development, and Database Management. 
+      
+      I delivered interactive one-on-one sessions, broke down complex concepts into simpler explanations, and tailored teaching methods to suit different learning styles. 
+      
+      I also created custom assignments, guided students through project work, and helped them prepare effectively for exams. 
+      
+      My sessions were conducted using tools like Zoom, collaborative coding platforms, and digital whiteboards, ensuring a high level of student engagement and satisfaction.
+    `,
+    duration: "Feb 2024 - Oct 2024",
     country: "India",
   }
 ]
+ 
 
 const Experience = () => {
   return (
