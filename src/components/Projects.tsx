@@ -39,16 +39,18 @@ const projects = [
     projectLink: "https://reelpro.vercel.app",
   },
   {
-    title: "Business Startup",
+    title: "MeowBark",
     type: "AI/ML",
-    description: "Design & Development",
-    imgUrl: "/projImg/HeapFlow.png",
+    description: "MeowBark is a smart web app that uses deep learning to instantly classify whether an uploaded image is of a cat or a dog.",
+    imgUrl: "/projImg/MeowBark.png",
+    projectLink: "https://meowbark.onrender.com/"
   },
   {
-    title: "Business Startup",
+    title: "MathScope",
     type: "AI/ML",
-    description: "Design & Development",
-    imgUrl: "/projImg/PiTalk.png",
+    description: "MathScope is your smart companion for predicting math exam scores based on your learning patterns and past performance.",
+    imgUrl: "/projImg/MathScope.png",
+    projectLink: "https://mathscope.onrender.com"
   },
   {
     title: "Business Startup",
