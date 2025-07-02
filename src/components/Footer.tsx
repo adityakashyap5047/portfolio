@@ -1,6 +1,6 @@
 "use client";
 
-import { FaGithub, FaLinkedin, FaTwitter } from "react-icons/fa";
+import { FaGithub, FaLinkedin } from "react-icons/fa";
 import { MdEmail } from "react-icons/md";
 import MainImage from "./MainImage";
 
@@ -21,40 +21,41 @@ const Footer = () => {
 
         <div className="flex flex-1 gap-10 justify-around">
           <div>
-          <h2 className="text-xl font-semibold mb-4">Quick Links</h2>
+          <h2 className="text-xl font-semibold mb-4 border-b-2 border-[#00e0ff] inline-block pb-1">Quick Links</h2>
           <ul className="space-y-2 text-gray-300">
-            <li>
-              <a href="#home" className="hover:text-white">Home</a>
+            <li className="hover:text-[#00e0ff] hover:scale-110">
+              <a href="#home">Home</a>
             </li>
-            <li>
-              <a href="#about" className="hover:text-white">About</a>
+            <li className="hover:text-[#00e0ff] hover:scale-110">
+              <a href="#skills">Skills</a>
             </li>
-            <li>
-              <a href="#projects" className="hover:text-white">Projects</a>
+            <li className="hover:text-[#00e0ff] hover:scale-110">
+              <a href="#experience">Experience</a>
             </li>
-            <li>
-              <a href="#contact" className="hover:text-white">Contact</a>
+            <li className="hover:text-[#00e0ff] hover:scale-110">
+              <a href="#projects">Projects</a>
+            </li>
+            <li className="hover:text-[#00e0ff] hover:scale-110">
+              <a href="#contact">Contact</a>
             </li>
           </ul>
           </div>        
           <div>
-            <h2 className="text-xl font-semibold mb-4">Connect With Me</h2>
+            <h2 className="text-xl font-semibold mb-4 border-b-2 border-[#00e0ff] inline-block pb-1">
+              Connect With Me
+            </h2>
             <ul className="space-y-3 text-gray-300">
-              <li className="flex items-center space-x-3">
+              <li className="flex items-center space-x-3 hover:text-[#00e0ff] hover:scale-110">
                 <FaGithub size={20} />
-                <a href="https://github.com/adityakashyap5047" target="_blank" className="hover:text-white">GitHub</a>
+                <a href="https://github.com/adityakashyap5047" target="_blank">GitHub</a>
               </li>
-              <li className="flex items-center space-x-3">
+              <li className="flex items-center space-x-3 hover:text-[#00e0ff] hover:scale-110">
                 <FaLinkedin size={20} />
-                <a href="https://linkedin.com/in/adityakashyap5047" target="_blank" className="hover:text-white">LinkedIn</a>
+                <a href="https://linkedin.com/in/adityakashyap5047" target="_blank">LinkedIn</a>
               </li>
-              <li className="flex items-center space-x-3">
-                <FaTwitter size={20} />
-                <a href="https://twitter.com/adityakashyap5047" target="_blank" className="hover:text-white">Twitter</a>
-              </li>
-              <li className="flex items-center space-x-3">
+              <li className="flex items-center space-x-3 hover:text-[#00e0ff] hover:scale-110">
                 <MdEmail size={20} />
-                <a href="mailto:adityakashyap5047@gmail.com" className="hover:text-white">Email</a>
+                <a href="mailto:adityakashyap5047@gmail.com">Email</a>
               </li>
             </ul>
           </div>
