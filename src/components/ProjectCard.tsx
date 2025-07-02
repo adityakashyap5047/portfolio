@@ -18,19 +18,19 @@ const ProjectCard = ({
   projectLink = "https://quickquips.vercel.app",
 }: ProjectCardProps) => {
   return (
-    <div className="relative cursor-pointer rounded-3xl overflow-hidden group shadow-xl">
+    <div className="relative cursor-pointer rounded-md overflow-hidden group shadow-xl aspect-[16/9]">
       {/* Image */}
       <Image
         src={imgUrl}
         alt={title}
-        width={500}
-        height={500}
-        className="w-full h-auto object-cover transition-transform duration-700 ease-in-out group-hover:scale-105"
+        width={1878}
+        height={1045}
+        className="w-full h-full object-cover transition-transform duration-700 ease-in-out group-hover:scale-105"
       />
 
-      {/* Sliding Blur Overlay (no flicker) */}
+      {/* Sliding Blur Overlay */}
       <div
-        className="absolute top-[-100%] left-0 w-full h-full bg-white/10 backdrop-blur-md rounded-3xl 
+        className="absolute top-[-100%] left-0 w-full h-full bg-white/10 backdrop-blur-md rounded-md 
         group-hover:top-0 transition-all duration-700 ease-in-out"
       />
 
@@ -41,7 +41,7 @@ const ProjectCard = ({
       >
         <div>
           <h4 className="text-[#021024] text-2xl font-bold mb-2 drop-shadow-md">{title}</h4>
-        <p className="text-[#021024]/90 italic text-sm mb-4 max-w-sm">{description}</p>
+          <p className="text-[#021024]/90 italic text-sm mb-4 max-w-sm">{description}</p>
         </div>
         <Link href={projectLink} target="_blank">
           <button
