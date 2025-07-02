@@ -1,8 +1,6 @@
 "use client";
 
 import { useState } from "react";
-import projImg2 from "@/assets/img/project-img2.png";
-import projImg3 from "@/assets/img/project-img3.png";
 import ProjectCard from "./ProjectCard";
 
 const tabs = [
@@ -22,13 +20,13 @@ const projects = [
     title: "Business Startup",
     type: "Web Development",
     description: "Design & Development",
-    imgUrl: projImg2,
+    imgUrl: "/projImg/PiTalk.png",
   },
   {
     title: "Business Startup",
     type: "Web Development",
     description: "Design & Development",
-    imgUrl: projImg3,
+    imgUrl: "/projImg/QuickQuips.png",
   },
   {
     title: "Business Startup",
@@ -40,13 +38,13 @@ const projects = [
     title: "Business Startup",
     type: "AI/ML",
     description: "Design & Development",
-    imgUrl: projImg2,
+    imgUrl: "/projImg/PiTalk.png",
   },
   {
     title: "Business Startup",
     type: "DevOps",
     description: "Design & Development",
-    imgUrl: projImg3,
+    imgUrl: "/projImg/PiTalk.png",
   },
 ];
 

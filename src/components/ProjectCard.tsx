@@ -1,21 +1,20 @@
 "use client";
 
-import Image, { StaticImageData } from "next/image";
+import Image from "next/image";
 import Link from "next/link";
-import projImg1 from "@/assets/img/project-img1.png";
 
 interface ProjectCardProps {
   title?: string;
   description?: string;
-  imgUrl?: StaticImageData;
+  imgUrl?: string;
   projectLink?: string;
 }
 
 const ProjectCard = ({
-  title = "QuickQuips",
-  description = "Anonymous thoughts shared with the world",
-  imgUrl = projImg1,
-  projectLink = "https://quickquips.vercel.app",
+  title = "HeapFlow",
+  description = "The ultimate platform for sharing and upvoting anonymous thoughts, confessions, and ideas.",
+  imgUrl = "/projImg/HeapFlow.png",
+  projectLink = "https://heapflow.vercel.app",
 }: ProjectCardProps) => {
   return (
     <div className="relative cursor-pointer rounded-md overflow-hidden group shadow-xl aspect-[16/9]">
