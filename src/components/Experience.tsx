@@ -3,6 +3,7 @@
 import { VerticalTimeline }  from 'react-vertical-timeline-component';
 import 'react-vertical-timeline-component/style.min.css';
 import TimelineElement from './TimelineElement';
+import { FaChalkboardTeacher } from "react-icons/fa";
 
 const experiences = [
   {
@@ -21,6 +22,8 @@ const experiences = [
     `,
     duration: "May 2025 - Present",
     country: "India",
+    buttonText: "",
+    buttonLink: "#"
   },
   {
     position: "Freelance Developer",
@@ -37,7 +40,9 @@ const experiences = [
       I manage project timelines independently, communicate across time zones, and ensure client satisfaction through efficient delivery and problem-solving.
     `,
     duration: "Jul 2024 - May 2025",
-    country: "United States",
+    country: "India",
+    buttonText: "",
+    buttonLink: "#"
   },
   {
     position: "Back End Developer",
@@ -55,6 +60,8 @@ const experiences = [
     `,
     duration: "Apr 2024 - Oct 2024",
     country: "India",
+    buttonText: "",
+    buttonLink: "#"
   },
   {
     position: "Online Tutor",
@@ -72,9 +79,11 @@ const experiences = [
     `,
     duration: "Feb 2024 - Oct 2024",
     country: "India",
+    buttonText: "",
+    buttonLink: "#"
   }
 ]
- 
+
 
 const Experience = () => {
   return (
@@ -89,9 +98,20 @@ const Experience = () => {
         </p>
         </div>
       <VerticalTimeline lineColor="rgb(33, 150, 243)">
-        <TimelineElement />
-        <TimelineElement />
-        <TimelineElement /> 
+        {experiences.map((experience, index) => (
+          <TimelineElement
+            key={index}
+            company={experience.company}
+            position={experience.position}
+            role={experience.role}
+            type={experience.type}
+            duration={experience.duration}
+            icon={<FaChalkboardTeacher />}
+            description={experience.Description}
+            buttonText={experience.buttonText}
+            buttonLink={experience.buttonLink}
+          />
+        ))}
       </VerticalTimeline>
     </section>
   );
