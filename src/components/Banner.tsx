@@ -6,7 +6,6 @@ import MainImage from "./MainImage";
 import { Shapes } from "./Shapes";
 import Link from "next/link";
 import aditya_kumar from "@/assets/img/Aditya-Kumar.png"
-import adityakumar from "@/assets/img/AdityaKumar.png"
 
 const toRotate = ["Full-Stack Developer", "AI/ML Engineer"];
 const period = 1000;
