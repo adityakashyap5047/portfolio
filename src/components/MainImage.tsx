@@ -1,18 +1,18 @@
-import Image from "next/image"
-import fghjfg from "@/assets/img/fghjfg.png"
+import Image, { StaticImageData } from "next/image"
 
 interface MainImageProps {
+  src: StaticImageData;
   animate?: string;
   className?: string;
   containerClassName?: string;
 }
 
-const MainImage = ({ animate, className, containerClassName }: MainImageProps) => {
+const MainImage = ({ src, animate, className, containerClassName }: MainImageProps) => {
 
   return (
     <div className={`text-center ${animate}`}>
-        <div className={`rounded-full flex justify-center items-center bg-[#00e0ff] shadow-[0_5px_30px_rgba(0,224,255,0.5)] ${containerClassName}`}>
-          <Image src={fghjfg} width={280} height={280} alt="Profile Picture" className={` rounded-full object-cover ${className}`} />
+        <div className={`rounded-full flex justify-center items-center bg-[#A8E9F8] shadow-[0_5px_30px_rgba(0,224,255,0.5)] ${containerClassName}`}>
+          <Image src={src} width={128} height={128} alt="Profile Picture" className={` rounded-full object-cover ${className}`} />
         </div>
     </div>
   )

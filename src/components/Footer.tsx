@@ -4,6 +4,7 @@ import { FaGithub, FaLinkedin } from "react-icons/fa";
 import { MdEmail } from "react-icons/md";
 import MainImage from "./MainImage";
 import Link from "next/link";
+import aditya_kumar from "@/assets/img/AdityaKumar.png"
 
 const Footer = () => {
   return (
@@ -11,7 +12,7 @@ const Footer = () => {
       <div className="max-w-screen-xl mx-auto flex flex-wrap gap-10">
         <div className="max-w-xs">
           <div className="flex items-center space-x-3">
-            <MainImage className="w-12 h-12" containerClassName="w-16 h-16" />
+            <MainImage src={aditya_kumar} className="w-12 h-12" containerClassName="w-13 h-13" />
             <h1 className="text-2xl font-bold text-blue-200">Aditya Kumar</h1>
           </div>
           <p className="mt-4 text-gray-300">

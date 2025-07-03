@@ -5,6 +5,8 @@ import { motion } from "framer-motion";
 import MainImage from "./MainImage";
 import { Shapes } from "./Shapes";
 import Link from "next/link";
+import aditya_kumar from "@/assets/img/Aditya-Kumar.png"
+import adityakumar from "@/assets/img/AdityaKumar.png"
 
 const toRotate = ["Full-Stack Developer", "AI/ML Engineer"];
 const period = 1000;
@@ -64,7 +66,8 @@ const Banner = () => {
                 I specialize in <strong>full-stack web development</strong>, with hands-on experience in technologies such as <strong>HTML5, CSS3, JavaScript, React.js, Next.js, Node.js, Express.js, Django, MySQL,</strong> and <strong>MongoDB</strong>. I am proficient in designing robust RESTful and GraphQL APIs, and adept with modern version control and DevOps tools including <strong>Git, GitHub, GitLab, Vercel, Netlify, Docker</strong>, and <strong>Render</strong>.
               </p>
               <Link
-                href="/resume"
+                href="https://drive.google.com/file/d/1FE-C4bDrEZuegBoArxVmG1X8eDl25V5r/view?usp=drivesdk"
+                target="_blank"
                 className="relative inline-block px-8 py-3 text-[#021024] font-bold rounded-md bg-[#0ff] 
                           shadow-[0_0_10px_#0ff,0_0_20px_#0ff] overflow-hidden 
                           transition-all duration-300 transform hover:scale-105 group"
@@ -87,7 +90,7 @@ const Banner = () => {
               whileInView={{ scale: 1, opacity: 1 }}
               transition={{ duration: 0.7 }}
             >
-              <MainImage animate="animate-updown" className="w-30 h-30 sm:w-45 sm:h-45 md:w-70 md:h-70" containerClassName="w-35 h-35 sm:w-50 sm:h-50 md:w-75 md:h-75"/>
+              <MainImage src={aditya_kumar} animate="animate-updown" className="w-30 h-30 sm:w-45 sm:h-45 md:w-70 md:h-70" containerClassName="w-31 h-31 sm:w-46 sm:h-46 md:w-72 md:h-72"/>
             </motion.div>
             <div className="hidden xs:block mt-8 max-w-60 max-h-60">
               <Shapes />

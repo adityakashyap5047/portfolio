@@ -5,6 +5,7 @@ import Link from "next/link";
 import { ArrowRight } from "lucide-react";
 import { FiMenu, FiX } from "react-icons/fi";
 import MainImage from "./MainImage";
+import aditya_kumar from "@/assets/img/AdityaKumar.png"
 
 const NavBar = () => {
   const [activeLink, setActiveLink] = useState("home");
@@ -36,7 +37,7 @@ const NavBar = () => {
       <div className="px-8 flex justify-between items-center">
         {/* Logo */}
         <Link href="/">
-          <MainImage className="w-12 h-12" containerClassName="w-16 h-16" />
+          <MainImage src={aditya_kumar} className="w-12 h-12" containerClassName="w-13 h-13" />
         </Link>
 
         {/* Mobile Toggler */}

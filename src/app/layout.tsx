@@ -4,8 +4,6 @@ import "./globals.css";
 import NavBar from "@/components/NavBar";
 import Footer from "@/components/Footer";
 
-// import icon from "@/assets/img/fghjfg.png"
-
 const geistSans = Geist({
   variable: "--font-geist-sans",
   subsets: ["latin"],
@@ -20,9 +18,9 @@ export const metadata: Metadata = {
   title: 'Aditya Kumar - Portfolio',
   description: 'Aditya Kumar is a Software Developer with expertise in Web Developement and AI/ML. Visit the portfolio to explore projects, skills, experience, and more.',
   icons: {
-    icon: "images/fghjfg.png",
-    shortcut: "images/fghjfg.png",
-    apple: "images/fghjfg.png",
+    icon: "images/Aditya.png",
+    shortcut: "images/Aditya.png",
+    apple: "images/Aditya.png",
   },
 };
 
