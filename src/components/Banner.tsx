@@ -92,7 +92,7 @@ const Banner = () => {
             >
               <MainImage src={aditya_kumar} animate="animate-updown" className="w-30 h-30 sm:w-45 sm:h-45 md:w-70 md:h-70" containerClassName="w-31 h-31 sm:w-46 sm:h-46 md:w-72 md:h-72"/>
             </motion.div>
-            <div className="hidden xs:block mt-8 max-w-60 max-h-60">
+            <div className="hidden xs:block mt-10 max-w-60 max-h-60">
               <Shapes />
             </div>
           </div>
