@@ -56,7 +56,7 @@ const NavBar = () => {
             {["home", "skills", "experience", "projects", "contact"].map((link) => (
               <a
                 key={link}
-                href={`#${link}`}
+                href={`/#${link}`}
                 onClick={() => handleClick(link)}
                 className={`block py-2 md:py-0 font-medium text-white text-lg tracking-wide transition-all duration-200 ${
                   activeLink === link ? "opacity-100" : "opacity-75"

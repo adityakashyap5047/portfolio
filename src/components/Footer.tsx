@@ -3,6 +3,7 @@
 import { FaGithub, FaLinkedin } from "react-icons/fa";
 import { MdEmail } from "react-icons/md";
 import MainImage from "./MainImage";
+import Link from "next/link";
 
 const Footer = () => {
   return (
@@ -24,19 +25,19 @@ const Footer = () => {
           <h2 className="text-xl font-semibold mb-4 border-b-2 border-[#00e0ff] inline-block pb-1">Quick Links</h2>
           <ul className="space-y-2 text-gray-300">
             <li className="hover:text-[#00e0ff] hover:scale-110">
-              <a href="#home">Home</a>
+              <Link href="/#home">Home</Link>
             </li>
             <li className="hover:text-[#00e0ff] hover:scale-110">
-              <a href="#skills">Skills</a>
+              <Link href="/#skills">Skills</Link>
             </li>
             <li className="hover:text-[#00e0ff] hover:scale-110">
-              <a href="#experience">Experience</a>
+              <Link href="/#experience">Experience</Link>
             </li>
             <li className="hover:text-[#00e0ff] hover:scale-110">
-              <a href="#projects">Projects</a>
+              <Link href="/#projects">Projects</Link>
             </li>
             <li className="hover:text-[#00e0ff] hover:scale-110">
-              <a href="#contact">Contact</a>
+              <Link href="/#contact">Contact</Link>
             </li>
           </ul>
           </div>        
