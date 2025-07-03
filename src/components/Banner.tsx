@@ -49,38 +49,41 @@ const Banner = () => {
       <div className="max-w-7xl mx-auto md:mt-24">
         <div className="flex gap-8 md:flex-row flex-col-reverse">
           {/* Text Section */}
-          <div>
             <motion.div
-              initial={{ opacity: 0, y: 40 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6 }}
-            >
-              <h1 className="md:mt-16 max-1xs:mt-0 ss:my-6 xs:my-0 text-3xl sm:text-4xl xm:text-5xl lg:text-6xl font-bold text-white leading-tight ">
-                Hi! I am Aditya Kumar,{" "}<br />
-                <span className="border-r-2 border-gray-400 pr-2 text-2xl sm:text-3xl xm:text-4xl lg:text-5xl ">
-                  {text}
-                </span>
-              </h1>
-              <p className="text-gray-300 text-base sm:text-lg md:text-lg leading-relaxed max-xs:my-4 xs:my-8 sl:mt-24 sl:max-w-[75%] sl:mb-11">
-                I specialize in <strong>full-stack web development</strong>, with hands-on experience in technologies such as <strong>HTML5, CSS3, JavaScript, React.js, Next.js, Node.js, Express.js, Django, MySQL,</strong> and <strong>MongoDB</strong>. I am proficient in designing robust RESTful and GraphQL APIs, and adept with modern version control and DevOps tools including <strong>Git, GitHub, GitLab, Vercel, Netlify, Docker</strong>, and <strong>Render</strong>.
-              </p>
-              <Link
-                href="https://drive.google.com/file/d/1FE-C4bDrEZuegBoArxVmG1X8eDl25V5r/view?usp=drivesdk"
-                target="_blank"
-                className="relative inline-block px-8 py-3 text-[#021024] font-bold rounded-md bg-[#0ff] 
-                          shadow-[0_0_10px_#0ff,0_0_20px_#0ff] overflow-hidden 
-                          transition-all duration-300 transform hover:scale-105 group"
-              >
-                <span
-                  className="absolute inset-0 w-full h-full bg-gradient-to-r 
-                            from-transparent via-white/60 to-transparent animate-shine 
-                            group-hover:opacity-100 opacity-0 blur-sm"
-                />
-                <span className="relative z-10">My Resume</span>
-              </Link>
+  initial={{ opacity: 0, y: 40 }}
+  whileInView={{ opacity: 1, y: 0 }}
+  transition={{ duration: 0.8, ease: "easeOut" }}
+  className="text-center sm:text-left"
+>
+  <h1 className="md:mt-16 max-1xs:mt-0 ss:my-6 xs:my-0 text-3xl sm:text-4xl xm:text-5xl lg:text-6xl font-extrabold text-white leading-tight tracking-tight">
+    Hi! I am Aditya Kumar,<br />
+    <span className="border-r-2 border-gray-400 pr-2 text-2xl sm:text-3xl xm:text-4xl lg:text-5xl animate-pulse text-cyan-300">
+      {text}
+    </span>
+  </h1>
 
-            </motion.div>
-          </div>
+  <p className="text-gray-300 text-sm sm:text-base 2xm:text-lg leading-relaxed max-xs:my-4 xs:my-8 sm:mt-10 sm:max-w-4xl sl:mb-12 mx-auto">
+    I specialize in full-stack web development, with practical experience in building scalable applications using HTML5, CSS3, JavaScript, React.js, Next.js, Node.js, Express.js, Django, MySQL, and MongoDB.
+    <br /><br />
+    In addition to web development, I have a strong foundation in Artificial Intelligence and Machine Learning, with hands-on experience in developing ML models, working with deep learning frameworks, and exploring cutting-edge technologies like Generative AI and Agentic AI. 
+  </p>
+
+  <Link
+    href="https://drive.google.com/file/d/1FE-C4bDrEZuegBoArxVmG1X8eDl25V5r/view?usp=drivesdk"
+    target="_blank"
+    className="relative inline-block px-8 py-3 text-[#021024] font-bold rounded-md bg-[#0ff] 
+                shadow-[0_0_10px_#0ff,0_0_20px_#0ff] overflow-hidden 
+                transition-transform duration-300 transform hover:scale-105 group"
+  >
+    <span
+      className="absolute inset-0 w-full h-full bg-gradient-to-r 
+                from-transparent via-white/60 to-transparent animate-shine 
+                group-hover:opacity-100 opacity-0 blur-sm"
+    />
+    <span className="relative z-10">My Resume</span>
+  </Link>
+</motion.div>
+
 
           {/* Image Section */}
           <div className="flex-row flex md:flex-col mt-12 sm:gap-12 max-1xs:mt-16 max-xs:mt-18 justify-center items-center ">
