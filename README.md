@@ -1,36 +1,97 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 💼 Aditya Kumar — Developer Portfolio
 
-## Getting Started
+Welcome to my personal portfolio website! 🚀  
+This is where I showcase my skills, projects, experiences, and passion for **Full-Stack Web Development** and **Artificial Intelligence**.
 
-First, run the development server:
+---
 
+## 🌟 Features
+
+- 🧑‍💻 Modern, responsive UI built with **React.js** and **Next.js**
+- 🎨 Beautiful design using **Tailwind CSS** with subtle animations via **Framer Motion**
+- ⚙️ Backend-ready structure for future integrations (contact forms, databases, etc.)
+- 🤖 Dedicated section for **AI/ML projects** and experience
+- 📱 Fully responsive across all devices and screen sizes
+- 📄 Resume download with animated interaction
+- 🔍 SEO-friendly and performance-optimized
+
+---
+
+## 🚀 Tech Stack
+
+### 🔧 Frontend
+- **React.js**
+- **Next.js (App Router)**
+- **Tailwind CSS**
+- **Framer Motion**
+- **TypeScript**
+
+### 🛠️ Backend (if integrated)
+- **Node.js**
+
+### ☁️ DevOps / Deployment
+- **Vercel**
+- **GitHub / Git**
+- **Docker** (optional)
+
+---
+
+## 📁 Folder Structure
+```plaintext
+📁 public/           → Static assets (images, icons, etc.)
+📁 components/       → Reusable UI components
+📁 app/ or pages/    → Next.js routing and layout
+📁 assets/           → Fonts, SVGs, or image files
+📄 README.md         → You’re here!
+```
+---
+
+## 🛠️ Getting Started
+
+### 1. Clone the Repository
+
+```bash
+git clone https://github.com/adityakashyap5047/portfolio.git
+cd portfolio
+```
+
+### 2. Install Dependencies
+```bash
+npm install
+# or
+yarn install
+```
+
+### 3. Run the Development Server
 ```bash
 npm run dev
 # or
 yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### 4. Open in Browser
+```bash
+http://localhost:3000
+```
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+### 📬 Contact
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+If you'd like to collaborate — feel free to reach out:
 
-## Learn More
+- 📧 **Email**: [adityakashyap5047@gmail.com](mailto:your-email@example.com)  
+- 🔗 **Portfolio**: [https://adityakashyap5047.vercel.app](https://adityakashyap5047.vercel.app)  
+- 🐙 **GitHub**: [@adityakashyap5047](https://github.com/adityakashyap5047)  
+- 🧠 **LinkedIn**: [Aditya Kumar](https://linkedin.com/in/adityakashyap5047)
 
-To learn more about Next.js, take a look at the following resources:
+---
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## 📝 License
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+This project is open-source and available under the [MIT License](LICENSE).
 
-## Deploy on Vercel
+---
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## ✨ Quote I Live By
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+> “Perfection is achieved not when there is nothing more to add, but rather when there is nothing more to take away.”  
+> — *Antoine de Saint-Exupéry*
