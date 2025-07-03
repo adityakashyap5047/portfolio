@@ -16,8 +16,7 @@ const Footer = () => {
             <h1 className="text-2xl font-bold text-blue-200">Aditya Kumar</h1>
           </div>
           <p className="mt-4 text-gray-300">
-            Full-stack developer passionate about creating exceptional web
-            applications and sharing knowledge with the development community.
+            Full-stack developer passionate about building dynamic, user-focused web applications and exploring AI to create smarter, more adaptive digital experiences.
           </p>
         </div>
 

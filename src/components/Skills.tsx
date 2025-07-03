@@ -140,12 +140,12 @@ export default function Skills() {
   className="relative [background-image:repeating-linear-gradient(-45deg,#00e0ff_0px,#00e0ff_80px,#000_80px,#000_160px)] overflow-hidden"
 >
   <div className="bg-[#021024]/90 rounded-sm shadow-sm px-4 mx-auto text-center">
-    <h2 className="text-[45px] text-white font-bold pt-24">My Skills</h2>
-    <p className="text-[#00e0ff] text-[18px] leading-relaxed tracking-wide my-12 ml-auto mr-auto sm:max-w-[43%] mx-auto">
-      Lorem Ipsum is simply dummy text of the printing and typesetting
-      industry. Lorem Ipsum has been the industry standard dummy text ever
-      since the 1500s, when an unknown printer took a galley of type and
-      scrambled it to make a type specimen book.
+    <h2 className="text-[45px] text-white font-bold pt-24 relative inline-block after:block after:w-20 after:h-1 after:bg-[#00e0ff] after:mx-auto after:mt-4">
+      My Skills
+    </h2>
+
+    <p className="text-[#00e0ff] text-[18px] leading-relaxed tracking-wide my-12 mx-auto sm:max-w-[70%] md:max-w-[60%] lg:max-w-[50%]">
+      Over time, I{`'`}ve developed a strong command over <span className="font-semibold text-white">full-stack development</span>, using tools like JavaScript, React, and Python to bring ideas to life across both frontend and backend. At the same time, my curiosity for innovation led me to explore the world of <span className="font-semibold text-white">Artificial Intelligence and Machine Learning</span> — from building smart models to integrating AI features into web applications. This fusion of <span className="italic text-white">development and intelligence</span> helps me craft solutions that are not only functional but also adaptive, efficient, and future-ready.
     </p>
 
     <div className="w-full flex items-center justify-center pb-12">

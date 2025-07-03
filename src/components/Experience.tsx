@@ -88,15 +88,21 @@ const experiences = [
 const Experience = () => {
   return (
     <section id='experience'style={{backgroundImage: 'radial-gradient(circle, #0D3E85 -90%, #021024 100%)'}}>
-      <div className="max-w-[1200px] pt-24 px-4 mx-auto text-center">
-        <h2 className="text-5xl text-white font-bold">Experience</h2>
-        <p className="text-[#00e0ff] text-[18px] leading-relaxed tracking-wide !my-12 !ml-auto !mr-auto sm:max-w-[56%] mx-auto">
-          Lorem Ipsum is simply dummy text of the printing and typesetting
-          industry. Lorem Ipsum has been the industry standard dummy text ever
-          since the 1500s, when an unknown printer took a galley of type and
-          scrambled it to make a type specimen book.
+      <div className="pt-24 px-4 mx-auto text-center">
+        <h2 className="text-[45px] text-white font-bold pt-24 relative inline-block after:block after:w-28 after:h-1 after:bg-[#00e0ff] after:mx-auto after:mt-4">
+          My Experience
+        </h2>
+
+        <p className="text-[#00e0ff] text-[18px] leading-relaxed tracking-wide my-12 mx-auto sm:max-w-[70%] md:max-w-[60%] lg:max-w-[50%]">
+          I{`'`}ve worked with multiple fast-paced startups and freelance teams as a <span className="text-white font-semibold">Full-Stack Web Developer</span>, building responsive and scalable web applications using technologies like <span className="text-white font-semibold">React, Next.js, Node.js, and MongoDB</span>. From designing sleek UIs to implementing robust backend APIs, I{`'`}ve had hands-on experience across the full development cycle. I{`'`}ve also contributed to established companies by helping them modernize their tech stacks and optimize performance for production-level apps.
+          <br /><br />
+          Beyond code, I love being part of the tech ecosystem—whether it{`'`}s contributing to <span className="text-white font-semibold">open-source projects</span>, mentoring juniors, or collaborating with global teams. My journey is driven by curiosity, creativity, and the belief that thoughtful code can change the way people interact with technology.
+          <br /><br />
+          <span className="italic text-white block mt-6">
+            “Perfection is achieved not when there is nothing more to add, but rather when there is nothing more to take away.”
+          </span>
         </p>
-        </div>
+      </div>
       <VerticalTimeline lineColor="rgb(33, 150, 243)">
         {experiences.map((experience, index) => (
           <TimelineElement
