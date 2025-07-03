@@ -6,7 +6,7 @@ import Experience from '@/components/Experience';
 
 function App() {
   return (
-    <div className="App">
+    <div className="App"> 
       <Banner />
       <Skills />
       <Experience />
