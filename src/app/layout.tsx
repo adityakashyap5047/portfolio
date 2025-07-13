@@ -18,9 +18,9 @@ export const metadata: Metadata = {
   title: 'Aditya Kumar - Portfolio',
   description: 'Aditya Kumar is a Software Developer with expertise in Web Developement and AI/ML. Visit the portfolio to explore projects, skills, experience, and more.',
   icons: {
-    icon: "images/Aditya.png",
-    shortcut: "images/Aditya.png",
-    apple: "images/Aditya.png",
+    icon: "images/AdityaKumar.png",
+    shortcut: "images/AdityaKumar.png",
+    apple: "images/AdityaKumar.png",
   },
 };
 
